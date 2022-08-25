@@ -87,29 +87,35 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 ### 2018 Analysis
 
 The barchart below shows the quantity of emails sent for all available ECHO series in 2018:
+
 <img src="Visualizations/2018/Email_campaigns_by_series_2018.png" alt="Email Campaigns by series 2018" width="400"/>
 
 The line graph below illustrates session attendance for all ECHO series offered in 2018:
+
 <img src="Visualizations/2018/Session_attendance_2018.png" alt="Session attendance 2018" width="400"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2018 series against the number of individuals who received emails about the series.  
+
 <img src="Visualizations/2018/Email_v_attendance_OPSUD_2018.png" alt="OPSUD Email v attendance 2018" width="400"/>
 
 <img src="Visualizations/2018/Email_v_attendance_BH_in_PC_2018.png" alt="BH in PC Email v attendance 2018" width="400"/>
 
 > **FINDING:**
-> The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+> The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails for the Opioid series, attendance at the ECHO sessions remained relatively constant over time. For the BH in PC series, the quantity of email recipients remains constant while the session attendance gradually declines.
 
 
 ### 2019 Analysis
 
 The barchart below shows the quantity of emails sent for all available ECHO series in 2019:
+
 <img src="Visualizations/2019/Email_campaigns_by_series_2019.png" alt="Email campaigns 2019" width="400"/>
 
 The line graph below illustrates session attendance for all ECHO series offered in 2019:
+
 <img src="Visualizations/2019/Session_attendance_2019.png" alt="Session attendance 2019" width="400"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2019 series against the number of individuals who received emails about the series. 
+
 <img src="Visualizations/2019/Email_v_attendance_OPSUD_2019.png" alt="OPSUD email v attendance 2019" width="400"/>
 
 <img src="Visualizations/2019/Email_v_attendance_BH_in_PC_2019.png" alt="BH in PC email v attendance 2019" width="400"/>
@@ -121,12 +127,15 @@ The line graphs below illustrate the relationship between session attendance for
 ### 2020 Analysis
 
 The barchart below shows the quantity of emails sent for all available ECHO series in 2020:
+
 <img src="Visualizations/2020/Email_campaigns_by_series_2020.png" alt="Email campaigns 2020" width="400"/>
 
 The line graph below illustrates session attendance for all ECHO series offered in 2020:
+
 <img src="Visualizations/2020/Session_attendance_2020.png" alt="session attendance 2020" width="400"/>
 
 Because the initial session of ECHO Idaho's COVID-19 series drew 600 attendees, the datapoint for that session, while accurate, represents a considerable outliar. Below is a graph representing the 2020 data with the outliars removed.
+
 <img src="Visualizations/2020/Session_attendance_2020_sans_outliars.png" alt="session attendance 2020 sans outliars" width="400"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2020 series against the number of individuals who received emails about the series. 
@@ -149,12 +158,15 @@ The line graphs below illustrate the relationship between session attendance for
 ### 2021 Analysis
 
 The barchart below shows the quantity of emails sent for all available ECHO series in 2021:
+
 <img src="Visualizations/2021/Email_campaigns_by_series_2021.png" alt="Emails by series 2021" width="400"/>
 
 The line graph below illustrates session attendance for all ECHO series offered in 2021:
+
 <img src="Visualizations/2021/Session_attendance_2021.png" alt="Session attendance 2021" width="400"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2021 series against the number of individuals who received emails about the series. 
+
 <img src="Visualizations/2021/Email_v_attendance_BH_in_PC_2021.png" alt="BH in PC email v attendance 2021" width="400"/> 
 
 <img src="Visualizations/2021/Email_v_attendance_OPSUD_2021.png" alt="OPSUD email v attendance 2021" width="400"/>
@@ -177,6 +189,7 @@ The line graphs below illustrate the relationship between session attendance for
 ### Cumulative Analysis (2018-2021)
 
 The barchart below shows the quantity of emails sent for all available ECHO series from 2018-2021:
+
 <img src="Visualizations/Cumulative/Email_campaigns_by_series_2018-2022.png" alt="Cumulative email campaigns" width="400"/>
 
 The line graphs below illustrate the relationship between session attendance for each of ECHO Idaho's  series against the number of individuals who received emails about the series, from the start of the series to the end of the series or the end of the 2021 calendar year. 
@@ -212,6 +225,7 @@ The scatter plot below illustrates the net growth of ECHO's population by new at
 <img src="Visualizations/Cumulative/Net_attendance_growth_cumulative.png" alt="Net attendance growth" width="400"/>
 
 Here is the same data color-coordinated to show which series brought in new participants, and when:
+
 <img src="Visualizations/Cumulative/Net_attendance_growth_by_series_cumulative.png" alt="Net attendance by series" width="400"/>
 
 >**FINDING:**
@@ -227,6 +241,7 @@ Here is the same data color-coordinated to show which series brought in new part
 
 
 #### Questions for Further Analysis
+- If attendance remains constant despite increased email recipients, does this indicate that the attendees at ECHO sessions are circulating or are the sessions being attended consistently by the same audience?
 - Do people forward our emails?
 - How many people are estimated to "fall through the cracks" because we lack a stable/reliable CRM (customer relations manager)?
 
