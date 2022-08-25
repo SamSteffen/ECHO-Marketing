@@ -88,15 +88,11 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 
 The barchart below shows the quantity of emails sent across ECHO series in 2018:
 
-<img src="Visualizations/2018/Email_campaigns_by_series_2018.png" alt="Email Campaigns by series 2018" width="400"/>
+<img src="Visualizations/2018/Session_attendance_totals_2018.png" alt="df - Session Attendance Totals 2018" width="400"/>
 
-<img src="Visualizations/2018/Session_attendance_totals_2018.png" alt="Session Attendance Totals 2018" width="400"/>
+<img src="Visualizations/2018/Email_campaigns_by_series_2018.png" alt="Email Campaigns by series 2018" width="400"/><img src="Visualizations/2018/Session_attendance_2018.png" alt="Session attendance 2018" width="400"/>
 
-<img src="Visualizations/2018/Session_attendance_2018.png" alt="Session attendance 2018" width="400"/>
-
-<img src="Visualizations/2018/Email_v_attendance_OPSUD_2018.png" alt="OPSUD Email v attendance 2018" width="400"/>
-
-<img src="Visualizations/2018/Email_v_attendance_BH_in_PC_2018.png" alt="BH in PC Email v attendance 2018" width="400"/>
+<img src="Visualizations/2018/Email_v_attendance_OPSUD_2018.png" alt="OPSUD Email v attendance 2018" width="400"/><img src="Visualizations/2018/Email_v_attendance_BH_in_PC_2018.png" alt="BH in PC Email v attendance 2018" width="400"/>
 
 ### 2019 Analysis
 
