@@ -48,9 +48,7 @@ The purpose of this analysis is to bring these disparate data sources together t
 ## Results
 To illustrate the impact of email campaigns on ECHO Idaho's series by attendance, it's important to state the various education series ECHO Idaho has hosted by program year. The following represents a dataframe showing 10 series, broken down by series name, launch-date and end-date:
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="200"/>
-
-![](Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png)
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 
 * Note that the several of the above series have continued beyond the listed "end-dates"; the iECHO attendance data is presented cumulatively at the end of the year; hence this data ends at the end of Dec. 2021.
 
@@ -90,27 +88,30 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 
 The barchart below shows the quantity of emails sent across ECHO series in 2018:
 
-![](Visualizations/2018/Email_campaigns_by_series_2018.png) 
+<img src="Visualizations/2018/Email_campaigns_by_series_2018.png" alt="Email Campaigns by series 2018" width="400"/>
 
-![](Visualizations/2018/Session_attendance_totals_2018.png)  
+<img src="Visualizations/2018/Session_attendance_totals_2018.png" alt="Session Attendance Totals 2018" width="400"/>
 
-![](Visualizations/2018/Session_attendance_2018.png)
+<img src="Visualizations/2018/Session_attendance_2018.png" alt="Session attendance 2018" width="400"/>
 
-![](Visualizations/2018/Email_v_attendance_OPSUD_2018.png)  
+<img src="Visualizations/2018/Email_v_attendance_OPSUD_2018.png" alt="OPSUD Email v attendance 2018" width="400"/>
 
-![](Visualizations/2018/Email_v_attendance_BH_in_PC_2018.png)
-
+<img src="Visualizations/2018/Email_v_attendance_BH_in_PC_2018.png" alt="BH in PC Email v attendance 2018" width="400"/>
 
 ### 2019 Analysis
 
 The barchart below shows the quantity of emails sent across ECHO series in 2019:
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2019/Email_campaigns_by_series_2019.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2019/Session_attendance_2019.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2019/Email_v_attendance_OPSUD_2019.png) 
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2019/Email_v_attendance_BH_in_PC_2019.png)
 
 
@@ -118,22 +119,31 @@ The barchart below shows the quantity of emails sent across ECHO series in 2019:
 
 The barchart below shows the quantity of emails sent across ECHO series in 2020:
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2020/Email_campaigns_by_series_2020.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2020/Session_attendance_2020.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2020/Session_attendance_2020_sans_outliars.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2020/Email_v_attendance_BH_in_PC_2020.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2020/Email_v_attendance_OPSUD_2020.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2020/Email_v_attendance_COVID_2020.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2020/Email_v_attendance_PALTC_2020.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2020/Email_v_attendance_PSUD_2020.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2020/Email_v_attendance_Syphilis_2020.png)
 
 
@@ -141,55 +151,79 @@ The barchart below shows the quantity of emails sent across ECHO series in 2020:
 
 The barchart below shows the quantity of emails sent across ECHO series in 2021:
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Email_campaigns_by_series_2021.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Session_attendance_2021.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Email_v_attendance_BH_in_PC_2021.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Email_v_attendance_OPSUD_2021.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Email_v_attendance_COVID_2021.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Email_v_attendance_PALTC_2021.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Email_v_attendance_PSUD_2021.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Email_v_attendance_CTSUDs_2021.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Email_v_attendance_PBH_2021.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/2021/Email_v_attendance_VHLC_2021.png)
 
 
 ### Cumulative Analysis (2018-2021)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_campaigns_by_series_2018-2022.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_v_attendance_OPSUD_cumulative.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_v_attendance_BH_in_PC_cumulative.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_v_attendance_COVID_cumulative.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_v_attendance_PALTC_cumulative.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_v_attendance_CTSUDs_cumulative.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_v_attendance_PSUD_cumulative.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_v_attendance_PBH_cumulative.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_v_attendance_Syphilis_cumulative.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Email_v_attendance_VHLC_cumulative.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Net_attendance_growth_cumulative.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/Net_attendance_growth_by_series_cumulative.png)
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/New_attendees_per_session_cumulative.png)  
 
+<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 ![](Visualizations/Cumulative/New_attendees_by_series_cumulative.png)
 
 
