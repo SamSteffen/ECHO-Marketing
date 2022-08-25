@@ -97,9 +97,9 @@ The line graphs below illustrate the relationship between session attendance for
 
 <img src="Visualizations/2018/Email_v_attendance_BH_in_PC_2018.png" alt="BH in PC Email v attendance 2018" width="400"/>
 
-<span style="background-color: gray">
+<span style="background-color: gray"
 **FINDING:**
-The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.>
 </span>
 
 ### 2019 Analysis
