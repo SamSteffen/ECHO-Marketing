@@ -50,14 +50,14 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 
 <img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
 
-* Note that the several of the above series have continued beyond the listed "end-dates"; the iECHO attendance data is presented cumulatively at the end of the year; hence this data ends at the end of Dec. 2021.
+* Note that the several of the above series have continued beyond the listed "end-dates." The iECHO attendance data is presented cumulatively at the end of the year; hence this data "ends" at the end of Dec. 2021 but does not necessarily indicate the end of a series. This df and the data in this analysis omits attendance data that is currently being gathered for series that began in 2022, like Pediatric Autism and MOUD Consultation Hours.
 
 ### ECHO Series Offered by Year
 #### 2018    
 - Opioid Addiction and Treatment series (eventually became "Opioids, Pain and Substance Use 
-       Disorders" in Jan. 2021, hereafter abbreviated "OPSUD")
-- Behavioral Health in Primary Care series (hereafter abbreviated "BH in PC") 
-- MAT Waiver Training (eventually renamed "X-Waiver Training", hereafter abbreviated "XWT")
+       Disorders" in Jan. 2021, hereafter abbreviated "**OPSUD**")
+- Behavioral Health in Primary Care series (hereafter abbreviated "**BH in PC**") 
+- MAT Waiver Training (eventually renamed "X-Waiver Training", hereafter abbreviated "**XWT**")
 
 #### 2019    
 - OPSUD
@@ -68,10 +68,10 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 - OPSUD
 - BH in PC
 - XWT
-- COVID-19 series (hereafter abbreviated "COVID")
-- Syphilis in Pregnancy series (hereafter abbreviated "Syphilis")
-- Perinatal Substance Use Disorder series (hereafter abbreviated "PSUD")
-- COVID-19 Nursing-Home Safety series (eventually re-name COVID-19 Safety for Post-Acute and Long-Term Care facilities, hereafter abbreviated "PALTC")
+- COVID-19 series (hereafter abbreviated "**COVID**")
+- Syphilis in Pregnancy series (hereafter abbreviated "**Syphilis**")
+- Perinatal Substance Use Disorder series (hereafter abbreviated "**PSUD**")
+- COVID-19 Nursing-Home Safety series (eventually re-name COVID-19 Safety for Post-Acute and Long-Term Care facilities, hereafter abbreviated "**PALTC**")
 
 #### 2021    
 - OPSUD
@@ -80,147 +80,145 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 - COVID
 - PALTC
 - PSUD
-- Pediatric Behavioral Health (hereafter abbreviated "PBH")
-- Hepatitis C (eventually renamed "Viral Hepatitis and Liver Care", hereafter abbreviated "VHLC")
-- Counseling Techniques for Substance Use Disorders (herafter abbreviated "CTSUDs")
+- Pediatric Behavioral Health (hereafter abbreviated "**PBH**")
+- Hepatitis C (eventually renamed "Viral Hepatitis and Liver Care", hereafter abbreviated "**VHLC**")
+- Counseling Techniques for Substance Use Disorders (herafter abbreviated "**CTSUDs**")
 
 ### 2018 Analysis
 
-The barchart below shows the quantity of emails sent across ECHO series in 2018:
+The barchart below shows the quantity of emails sent for all available ECHO series in 2018:
+<img src="Visualizations/2018/Email_campaigns_by_series_2018.png" alt="Email Campaigns by series 2018" width="400"/>
 
-<img src="Visualizations/2018/Session_attendance_totals_2018.png" alt="df - Session Attendance Totals 2018" width="400"/>
+The line graph below illustrates session attendance for all ECHO series offered in 2018:
+<img src="Visualizations/2018/Session_attendance_2018.png" alt="Session attendance 2018" width="400"/>
 
-<img src="Visualizations/2018/Email_campaigns_by_series_2018.png" alt="Email Campaigns by series 2018" width="400"/><img src="Visualizations/2018/Session_attendance_2018.png" alt="Session attendance 2018" width="400"/>
+The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2018 series against the number of individuals who received emails about the series.  
+<img src="Visualizations/2018/Email_v_attendance_OPSUD_2018.png" alt="OPSUD Email v attendance 2018" width="400"/>
 
-<img src="Visualizations/2018/Email_v_attendance_OPSUD_2018.png" alt="OPSUD Email v attendance 2018" width="400"/><img src="Visualizations/2018/Email_v_attendance_BH_in_PC_2018.png" alt="BH in PC Email v attendance 2018" width="400"/>
+<img src="Visualizations/2018/Email_v_attendance_BH_in_PC_2018.png" alt="BH in PC Email v attendance 2018" width="400"/>
+
+```FINDING:
+The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+```
 
 ### 2019 Analysis
 
-The barchart below shows the quantity of emails sent across ECHO series in 2019:
+The barchart below shows the quantity of emails sent for all available ECHO series in 2019:
+<img src="Visualizations/2019/Email_campaigns_by_series_2019.png" alt="Email campaigns 2019" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2019/Email_campaigns_by_series_2019.png)
+The line graph below illustrates session attendance for all ECHO series offered in 2019:
+<img src="Visualizations/2019/Session_attendance_2019.png" alt="Session attendance 2019" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2019/Session_attendance_2019.png)
+The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2019 series against the number of individuals who received emails about the series. 
+<img src="Visualizations/2019/Email_v_attendance_OPSUD_2019.png" alt="OPSUD email v attendance 2019" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2019/Email_v_attendance_OPSUD_2019.png) 
+<img src="Visualizations/2019/Email_v_attendance_BH_in_PC_2019.png" alt="BH in PC email v attendance 2019" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2019/Email_v_attendance_BH_in_PC_2019.png)
-
+```FINDING:
+The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+```
 
 ### 2020 Analysis
 
-The barchart below shows the quantity of emails sent across ECHO series in 2020:
+The barchart below shows the quantity of emails sent for all available ECHO series in 2020:
+<img src="Visualizations/2020/Email_campaigns_by_series_2020.png" alt="Email campaigns 2020" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2020/Email_campaigns_by_series_2020.png)
+The line graph below illustrates session attendance for all ECHO series offered in 2020:
+<img src="Visualizations/2020/Session_attendance_2020.png" alt="session attendance 2020" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2020/Session_attendance_2020.png)
+Because the initial session of ECHO Idaho's COVID-19 series drew 600 attendees, the datapoint for that session, while accurate, represents a considerable outliar. Below is a graph representing the 2020 data with the outliars removed.
+<img src="Visualizations/2020/Session_attendance_2020_sans_outliars.png" alt="session attendance 2020 sans outliars" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2020/Session_attendance_2020_sans_outliars.png)
+The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2020 series against the number of individuals who received emails about the series. 
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2020/Email_v_attendance_BH_in_PC_2020.png)  
+<img src="Visualizations/2020/Email_v_attendance_BH_in_PC_2020.png" alt="BH in PC email v attendance 2020" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2020/Email_v_attendance_OPSUD_2020.png)
+<img src="Visualizations/2020/Email_v_attendance_OPSUD_2020.png" alt="OPSUD email v attendance 2020" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2020/Email_v_attendance_COVID_2020.png)  
+<img src="Visualizations/2020/Email_v_attendance_COVID_2020.png" alt="COVID email v attendance 2020" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2020/Email_v_attendance_PALTC_2020.png)
+<img src="Visualizations/2020/Email_v_attendance_PALTC_2020.png" alt="PALTC email v attendance 2020" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2020/Email_v_attendance_PSUD_2020.png)  
+<img src="Visualizations/2020/Email_v_attendance_PSUD_2020.png" alt="PSUD email v attendance 2020" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2020/Email_v_attendance_Syphilis_2020.png)
+<img src="Visualizations/2020/Email_v_attendance_Syphilis_2020.png" alt="Syphilis email v attendance 2020" width="400"/>
 
+```FINDING:
+The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+```
 
 ### 2021 Analysis
 
-The barchart below shows the quantity of emails sent across ECHO series in 2021:
+The barchart below shows the quantity of emails sent for all available ECHO series in 2021:
+<img src="Visualizations/2021/Email_campaigns_by_series_2021.png" alt="Emails by series 2021" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Email_campaigns_by_series_2021.png)
+The line graph below illustrates session attendance for all ECHO series offered in 2021:
+<img src="Visualizations/2021/Session_attendance_2021.png" alt="Session attendance 2021" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Session_attendance_2021.png)
+The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2021 series against the number of individuals who received emails about the series. 
+<img src="Visualizations/2021/Email_v_attendance_BH_in_PC_2021.png" alt="BH in PC email v attendance 2021" width="400"/> 
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Email_v_attendance_BH_in_PC_2021.png)  
+<img src="Visualizations/2021/Email_v_attendance_OPSUD_2021.png" alt="OPSUD email v attendance 2021" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Email_v_attendance_OPSUD_2021.png)
+<img src="Visualizations/2021/Email_v_attendance_COVID_2021.png" alt="COVID email v attendance 2021" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Email_v_attendance_COVID_2021.png)  
+<img src="Visualizations/2021/Email_v_attendance_PALTC_2021.png" alt="PALTC email v attendance 2021" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Email_v_attendance_PALTC_2021.png)
+<img src="Visualizations/2021/Email_v_attendance_PSUD_2021.png" alt="PSUD email v attendance 2021" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Email_v_attendance_PSUD_2021.png)  
+<img src="Visualizations/2021/Email_v_attendance_CTSUDs_2021.png" alt="CTSUDs email v attendnace 2021" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Email_v_attendance_CTSUDs_2021.png)
+<img src="Visualizations/2021/Email_v_attendance_PBH_2021.png" alt="PBH email v attendance 2021" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Email_v_attendance_PBH_2021.png)  
+<img src="Visualizations/2021/Email_v_attendance_VHLC_2021.png" alt="VHLC email v attendance 2021" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/2021/Email_v_attendance_VHLC_2021.png)
-
+```FINDING:
+The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+```
 
 ### Cumulative Analysis (2018-2021)
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_campaigns_by_series_2018-2022.png)
+The barchart below shows the quantity of emails sent for all available ECHO series from 2018-2021:
+<img src="Visualizations/Cumulative/Email_campaigns_by_series_2018-2022.png" alt="Cumulative email campaigns" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_v_attendance_OPSUD_cumulative.png)  
+The line graphs below illustrate the relationship between session attendance for each of ECHO Idaho's  series against the number of individuals who received emails about the series, from the start of the series to the end of the series or the end of the 2021 calendar year. 
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_v_attendance_BH_in_PC_cumulative.png)
+<img src="Visualizations/Cumulative/Email_v_attendance_OPSUD_cumulative.png" alt="OPSUD email v attendance cumulative" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_v_attendance_COVID_cumulative.png)  
+<img src="Visualizations/Cumulative/Email_v_attendance_BH_in_PC_cumulative.png" alt="BH in PC email v attendance cumulative" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_v_attendance_PALTC_cumulative.png)
+<img src="Visualizations/Cumulative/Email_v_attendance_COVID_cumulative.png" alt="COVID email v attendance cumulative" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_v_attendance_CTSUDs_cumulative.png)  
+<img src="Visualizations/Cumulative/Email_v_attendance_PALTC_cumulative.png" alt="PALTC email v attendance cumulative" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_v_attendance_PSUD_cumulative.png)
+<img src="Visualizations/Cumulative/Email_v_attendance_CTSUDs_cumulative.png" alt="CTSUDs email v attendance cumulative" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_v_attendance_PBH_cumulative.png)  
+<img src="Visualizations/Cumulative/Email_v_attendance_PSUD_cumulative.png" alt="PSUD email v attendance cumulative" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_v_attendance_Syphilis_cumulative.png)
+<img src="Visualizations/Cumulative/Email_v_attendance_PBH_cumulative.png" alt="PBH email v attendance cumulative" width="400"/>  
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Email_v_attendance_VHLC_cumulative.png)
+<img src="Visualizations/Cumulative/Email_v_attendance_Syphilis_cumulative.png" alt="Syphilis email v attendance cumulative" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Net_attendance_growth_cumulative.png)  
+<img src="Visualizations/Cumulative/Email_v_attendance_VHLC_cumulative.png" alt="VHLC email v attendance cumulative" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/Net_attendance_growth_by_series_cumulative.png)
+The scatter plot below illustrates the growth of ECHO Idaho's programs by new attendees over time:
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/New_attendees_per_session_cumulative.png)  
+<img src="Visualizations/Cumulative/New_attendees_per_session_cumulative.png" alt="New attendees per session cumulative" width="400"/>
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
-![](Visualizations/Cumulative/New_attendees_by_series_cumulative.png)
+Here is the same data color-coordinated to show which series brought in new participants, and when:
+
+<img src="Visualizations/Cumulative/New_attendees_by_series_cumulative.png" alt="New attendees by series" width="400"/>
+
+The scatter plot below illustrates the net growth of ECHO's population by new attendees over time:
+
+<img src="Visualizations/Cumulative/Net_attendance_growth_cumulative.png" alt="Net attendance growth" width="400"/>
+
+Here is the same data color-coordinated to show which series brought in new participants, and when:
+<img src="Visualizations/Cumulative/Net_attendance_growth_by_series_cumulative.png" alt="Net attendance by series" width="400"/>
+
+```FINDING:
+The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+```
 
 
 ### Summary
