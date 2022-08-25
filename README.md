@@ -97,10 +97,9 @@ The line graphs below illustrate the relationship between session attendance for
 
 <img src="Visualizations/2018/Email_v_attendance_BH_in_PC_2018.png" alt="BH in PC Email v attendance 2018" width="400"/>
 
-<span style="background-color: gray"
-**FINDING:**
-The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.>
-</span>
+> **FINDING:**
+> The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+
 
 ### 2019 Analysis
 
@@ -115,10 +114,9 @@ The line graphs below illustrate the relationship between session attendance for
 
 <img src="Visualizations/2019/Email_v_attendance_BH_in_PC_2019.png" alt="BH in PC email v attendance 2019" width="400"/>
 
-<span style="background-color: gray">
-**FINDING:**
-The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
-</span>
+
+> **FINDING:**
+> The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
 
 ### 2020 Analysis
 
@@ -145,10 +143,8 @@ The line graphs below illustrate the relationship between session attendance for
 
 <img src="Visualizations/2020/Email_v_attendance_Syphilis_2020.png" alt="Syphilis email v attendance 2020" width="400"/>
 
-<span style="background-color: gray">
-**FINDING:**
-The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
-</span>
+>**FINDING:**
+>The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
 
 ### 2021 Analysis
 
@@ -175,10 +171,8 @@ The line graphs below illustrate the relationship between session attendance for
 
 <img src="Visualizations/2021/Email_v_attendance_VHLC_2021.png" alt="VHLC email v attendance 2021" width="400"/>
 
-<span style="background-color: gray">
-**FINDING:**
-The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
-</span>
+> **FINDING:**
+> The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
 
 ### Cumulative Analysis (2018-2021)
 
@@ -220,10 +214,8 @@ The scatter plot below illustrates the net growth of ECHO's population by new at
 Here is the same data color-coordinated to show which series brought in new participants, and when:
 <img src="Visualizations/Cumulative/Net_attendance_growth_by_series_cumulative.png" alt="Net attendance by series" width="400"/>
 
-<span style="background-color: gray">
-**FINDING:**
-The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
-</span>
+>**FINDING:**
+>The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
 
 
 ### Summary
