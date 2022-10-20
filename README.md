@@ -13,7 +13,7 @@ Once an individual has completed the registration for one or several ECHO series
 
 Completing registration prior to or following an ECHO session is NOT required to attend and participate in ECHO Idaho sessions. 
 
-Until September of 2022, the University of Idaho utilized MailChimp as its primary email communications instrument. 
+Until November of 2022, the University of Idaho utilized MailChimp as its primary email communications instrument. 
 
 ### Types of Emails Sent by ECHO Idaho
 From its inception ECHO Idaho has utilized several types of email campaigns to effectively recruit and maintain attendance across series:
