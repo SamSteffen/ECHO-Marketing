@@ -92,9 +92,13 @@ The barchart below shows the quantity of emails sent for all available ECHO seri
 
 The line graph below illustrates session attendance for all ECHO series offered in 2018:
 
-<img src="Visualizations/2018/Session_attendance_2018.png" alt="Session attendance 2018" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2018_attendance_chart.jpg" alt="Session attendance 2018" width="400"/>
 
-The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2018 series against the number of individuals who received emails about the series.  
+The bubble chart below depicts the attendance by region for each ECHO Idaho series offered in 2018:
+
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2018_map.jpg" width = "400"/>
+
+The line graphs below illustrates the relationship between session attendance for ECHO Idaho's 2018 series against the number of individuals who received emails about the series.  
 
 <img src="Visualizations/2018/Email_v_attendance_OPSUD_2018.png" alt="OPSUD Email v attendance 2018" width="400"/>
 
@@ -112,7 +116,11 @@ The barchart below shows the quantity of emails sent for all available ECHO seri
 
 The line graph below illustrates session attendance for all ECHO series offered in 2019:
 
-<img src="Visualizations/2019/Session_attendance_2019.png" alt="Session attendance 2019" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2019_attendance_chart.jpg" alt="Session attendance 2019" width="400"/>
+
+The bubble chart below depicts the attendance by region for each ECHO Idaho series offered in 2019:
+
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2019_map.jpg" width = "400"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2019 series against the number of individuals who received emails about the series. 
 
@@ -132,11 +140,15 @@ The barchart below shows the quantity of emails sent for all available ECHO seri
 
 The line graph below illustrates session attendance for all ECHO series offered in 2020:
 
-<img src="Visualizations/2020/Session_attendance_2020.png" alt="session attendance 2020" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2020_attendance_chart.jpg" alt="session attendance 2020" width="400"/>
+
+The bubble chart below depicts the attendance by region for each ECHO Idaho series offered in 2020:
+
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2020_map.jpg" width = "400"/>
 
 Because the initial session of ECHO Idaho's COVID-19 series drew 600 attendees, the datapoint for that session, while accurate, represents a considerable outliar. Below is a graph representing the 2020 data with the outliars removed.
 
-<img src="Visualizations/2020/Session_attendance_2020_sans_outliars.png" alt="session attendance 2020 sans outliars" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2020_attendance_chart%20-%20sans_outliars.jpg" alt="session attendance 2020 sans outliars" width="400"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2020 series against the number of individuals who received emails about the series. 
 
@@ -164,6 +176,10 @@ The barchart below shows the quantity of emails sent for all available ECHO seri
 The line graph below illustrates session attendance for all ECHO series offered in 2021:
 
 <img src="Visualizations/2021/Session_attendance_2021.png" alt="Session attendance 2021" width="400"/>
+
+The bubble chart below depicts the attendance by region for each ECHO Idaho series offered in 2021:
+
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2021_map.jpg" width = "400"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2021 series against the number of individuals who received emails about the series. 
 
