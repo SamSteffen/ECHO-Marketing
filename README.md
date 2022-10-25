@@ -88,7 +88,7 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 
 The barchart below shows the quantity of emails sent for all available ECHO series in 2018:
 
-<img src="Visualizations/2018/Matplotlib/Email_campaigns_by_series_2018.png" alt="Email Campaigns by series 2018" width="400"/>
+<img src="Visualizations/2018/matplotlib/Email_campaigns_by_series_2018.png" alt="Email Campaigns by series 2018" width="400"/>
 
 The line graph below illustrates session attendance for all ECHO series offered in 2018:
 
