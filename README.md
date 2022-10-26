@@ -22,7 +22,7 @@ These are emails that individuals who are registered for a particular series rec
 2. **Weekly Emails:**    
 Because ECHO is of a size now where it has multiple sessions from different series each week, a weekly email is sent out every Monday morning, featuring all of the ECHO sessions occuring in a given week. These emails also feature announcements about upcoming events and participant reminders.
 3. **Newsletters:**    
-In August of 2020, ECHO Idaho sent its first newsletter. These were initially sent quarterly, then bi-montlhly. As of 2022, they have become semi-bi-monthly (meaning sometimes they're sent every month).
+In August of 2020, ECHO Idaho sent its first newsletter. These were initially sent quarterly, then bi-montlhly. As of August 2022, they have become monthly.
 4. **Special Announcements:**    
 Special announcement emails are utilized for special occasions, guest speakers, series launches/re-launches, special registrations, redactions and other infrequent or singular events and communications. 
 
@@ -32,18 +32,13 @@ The data sources for this analysis include:
 An ECHO program-specific online database where personal info (name, email, credential, workplace, residence, etc.) as well as series and session attendance records are stored;
 2. **MailChimp**    
 The University of Idaho's main communications system, which stores and preserves metrics fo each campaign such as: how many people received each email, how many times it was opened, how many times it was forwarded, how many links were clicked, etc.;
-3. **[eeds](https://www.eeds.com/cloud-based-tracker-for-cme/healthcare-professionals)**    
-An online platform where healthcare professionals are able to create and track continuing education credits earned for participation in ECHO Idaho and other event-based CE;
-4. **[SoundCloud](https://soundcloud.com/user-658492948)**    
-The host site of ECHO Idaho's CE-eligible podcast, *[Something for the Pain](https://www.uidaho.edu/academics/wwami/echo/podcast)*.
 
 ### Why Emails?
-The purpose of this analysis is to bring these disparate data sources together to create visualizations for attendance and email data for each ECHO series and activity years (2018-2021). It is also to determine the following:
+The purpose of this analysis is to bring these data sources together to create visualizations for attendance and email data for each ECHO series and activity years (2018-2021). It is also to determine the following:
 - The efficacy of daily email campaigns on program attendance (the relationship between email open-rates and session attendance).
-- The efficacy of weekly email campaigns on program attendance (the realtionship between email open-rates and session attendance).
 - What can be learned from the ECHO sessions with the best attendance and the type of email campaign that was used to promote it? 
 - What can be learned from the ECHO sessions with the worst attendance and the type of email campaigns used to promote it?
-- Using cumulative email and attendance data, establish a metric that can be used to determine successfull versus unsuccessful email campaigns for future marketing purposes.
+- Using cumulative email and attendance data, establish a metric that can be used to determine successful versus unsuccessful email campaigns for future marketing purposes.
 
 ## Results
 To illustrate the impact of email campaigns on ECHO Idaho's series by attendance, it's important to state the various education series ECHO Idaho has hosted by program year. The following represents a dataframe showing 10 series, broken down by series name, launch-date and end-date:
@@ -106,9 +101,6 @@ The line graphs below illustrates the relationship between session attendance fo
 
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2018/plotly/att_and_email_charts/att_v_emails_2018_opsud.png" width="800"/>
 
-> **FINDING:**
-> The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remained relatively constant over time. For the BH in PC series, the quantity of email recipients remains constant while the session attendance gradually declines.   
-
 ---
 
 ### 2019 Analysis
@@ -129,11 +121,7 @@ The line graphs below illustrate the relationship between session attendance for
 
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2019/plotly/att_and_email_charts/att_v_emails_bhpc_2019.png" width="800"/>
 
-<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2019/plotly/att_and_email_charts/att_v_emails_opsud_2019.png" width="800"/>
-
-
-> **FINDING:**
-> The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.   
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2019/plotly/att_and_email_charts/att_v_emails_opsud_2019.png" width="800"/> 
 
 ---
 
@@ -169,9 +157,6 @@ The line graphs below illustrate the relationship between session attendance for
 
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2020/plotly/att_and_email_charts/att_v_emails_psud_2020.png" width="800"/>
 
->**FINDING:**
->The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.   
-
 ---
 
 ### 2021 Analysis
@@ -205,9 +190,6 @@ The line graphs below illustrate the relationship between session attendance for
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/att_and_email_charts/att_v_email_ctsuds_cumulative.jpg" width="800"/>
 
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/att_and_email_charts/att_v_email_vhlc_cumulative.jpg" width="800"/>
-
-> **FINDING:**
-> The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.   
 
 ---
 
@@ -253,24 +235,14 @@ Here is the same data color-coordinated to show which series brought in new part
 
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/matplotlib/Net_attendance_growth_by_series_cumulative.png" alt="Net attendance by series" width="400"/>
 
->**FINDING:**
->The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.   
-
 ---
 
 ## Summary
-- The efficacy of daily email campaigns on program attendance (the relationship between email open-rates and session attendance).
-- The efficacy of weekly email campaigns on program attendance (the realtionship between email open-rates and session attendance).
-- What can be learned from the ECHO sessions with the best attendance and the type of email campaign that was used to promote it? 
-- What can be learned from the ECHO sessions with the worst attendance and the type of email campaigns used to promote it?
-- Using cumulative email and attendance data, establish a metric that can be used to determine successfull versus unsuccessful email campaigns for future marketing purposes.
-
+- In general, the data shows that despite steady and in some cases rapid increase of email recipients over time, attendance at ECHO sessions remains relatively constant.
+- New attendees appear in greater numbers at series kickoffs. This could be explained by various "special" email campaigns that are baked into the new series launches, that involve sending unsolicited emails to a wide list of contacts and promoting the information in partner publications for months in advance of the start-date.
 
 #### Questions for Further Analysis
-- If attendance remains constant despite increased email recipients, does this indicate that the attendees at ECHO sessions are circulating or are the sessions being attended consistently by the same audience?
+- If attendance remains constant despite increased email recipients, does this indicate that the attendees at ECHO sessions are circulating or are the sessions being attended consistently by the same audience? Further analysis is needed to determine this.
 - Do people forward our emails?
 - How many people are estimated to "fall through the cracks" because we lack a stable/reliable CRM (customer relations manager)?
-
-#### Projections
-- What are the population sizes of Idaho healthcare professionals? At what point will ECHO Idaho have reached all the healthcare professionals it can?
-
+- What is the impact of in-person proselytizing on session attendance and series registration (such as in-person conferences, site-visits, watch-parties, etc.)
