@@ -28,14 +28,14 @@ Special announcement emails are utilized for special occasions, guest speakers, 
 
 ### Data Sources
 The data sources for this analysis include:
-1. **iECHO**    
+1. **[iECHO](https://iecho.unm.edu/)**    
 An ECHO program-specific online database where personal info (name, email, credential, workplace, residence, etc.) as well as series and session attendance records are stored;
 2. **MailChimp**    
 The University of Idaho's main communications system, which stores and preserves metrics fo each campaign such as: how many people received each email, how many times it was opened, how many times it was forwarded, how many links were clicked, etc.;
-3. **eeds**    
+3. **[eeds](https://www.eeds.com/cloud-based-tracker-for-cme/healthcare-professionals)**    
 An online platform where healthcare professionals are able to create and track continuing education credits earned for participation in ECHO Idaho and other event-based CE;
-4. **SoundCloud**    
-The host site of ECHO Idaho's CE-eligible podcast, *Something for the Pain*.
+4. **[SoundCloud](https://soundcloud.com/user-658492948)**    
+The host site of ECHO Idaho's CE-eligible podcast, *[Something for the Pain](https://www.uidaho.edu/academics/wwami/echo/podcast)*.
 
 ### Why Emails?
 The purpose of this analysis is to bring these disparate data sources together to create visualizations for attendance and email data for each ECHO series and activity years (2018-2021). It is also to determine the following:
@@ -48,7 +48,7 @@ The purpose of this analysis is to bring these disparate data sources together t
 ## Results
 To illustrate the impact of email campaigns on ECHO Idaho's series by attendance, it's important to state the various education series ECHO Idaho has hosted by program year. The following represents a dataframe showing 10 series, broken down by series name, launch-date and end-date:
 
-<img src="Visualizations/Cumulative/Series_data_sessions_dates_cumulative.png" alt="df1" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/series_session_count_df.jpg" alt="df1" width="400"/>
 
 * Note that the several of the above series have continued beyond the listed "end-dates." The iECHO attendance data is presented cumulatively at the end of the year; hence this data "ends" at the end of Dec. 2021 but does not necessarily indicate the end of a series. This df and the data in this analysis omits attendance data that is currently being gathered for series that began in 2022, like Pediatric Autism and MOUD Consultation Hours.
 
@@ -88,21 +88,21 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 
 The barchart below shows the quantity of emails sent for all available ECHO series in 2018:
 
-<img src="Visualizations/2018/matplotlib/Email_campaigns_by_series_2018.png" alt="Email Campaigns by series 2018" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2018/plotly/email_charts/emails_2018.png" width="800"/>
 
 The line graph below illustrates session attendance for all ECHO series offered in 2018:
 
-<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2018_attendance_chart.jpg" alt="Session attendance 2018" width="800"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/attendance_charts/cumulative_2018_attendance_chart.jpg" alt="Session attendance 2018" width="800"/>
 
 The bubble chart below depicts the attendance by region for each ECHO Idaho series offered in 2018:
 
-<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2018_map.jpg" width = "800"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2018/plotly/maps/2018_cumulative_map.png" width = "800"/>
 
 The line graphs below illustrates the relationship between session attendance for ECHO Idaho's 2018 series against the number of individuals who received emails about the series.  
 
-<img src="Visualizations/2018/matplotlib/Email_v_attendance_OPSUD_2018.png" alt="OPSUD Email v attendance 2018" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2018/plotly/att_and_email_charts/att_v_email_bhpc_2018.png" width="800"/>
 
-<img src="Visualizations/2018/matplotlib/Email_v_attendance_BH_in_PC_2018.png" alt="BH in PC Email v attendance 2018" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2018/plotly/att_and_email_charts/att_v_emails_2018_opsud.png" width="800"/>
 
 > **FINDING:**
 > The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails for the Opioid series, attendance at the ECHO sessions remained relatively constant over time. For the BH in PC series, the quantity of email recipients remains constant while the session attendance gradually declines.
@@ -112,21 +112,21 @@ The line graphs below illustrates the relationship between session attendance fo
 
 The barchart below shows the quantity of emails sent for all available ECHO series in 2019:
 
-<img src="Visualizations/2019/matplotlib/Email_campaigns_by_series_2019.png" alt="Email campaigns 2019" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2019/plotly/email_charts/emails_2019.png" width="800"/>
 
 The line graph below illustrates session attendance for all ECHO series offered in 2019:
 
-<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2019_attendance_chart.jpg" alt="Session attendance 2019" width="800"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/attendance_charts/cumulative_2019_attendance_chart.jpg" alt="Session attendance 2019" width="800"/>
 
 The bubble chart below depicts the attendance by region for each ECHO Idaho series offered in 2019:
 
-<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2019_map.jpg" width = "800"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2019/plotly/maps/2019_cumulative_map.png" width = "800"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2019 series against the number of individuals who received emails about the series. 
 
-<img src="Visualizations/2019/matplotlib/Email_v_attendance_OPSUD_2019.png" alt="OPSUD email v attendance 2019" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2019/plotly/att_and_email_charts/att_v_emails_bhpc_2019.png" width="800"/>
 
-<img src="Visualizations/2019/matplotlib/Email_v_attendance_BH_in_PC_2019.png" alt="BH in PC email v attendance 2019" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2019/plotly/att_and_email_charts/att_v_emails_opsud_2019.png" width="800"/>
 
 
 > **FINDING:**
@@ -136,33 +136,33 @@ The line graphs below illustrate the relationship between session attendance for
 
 The barchart below shows the quantity of emails sent for all available ECHO series in 2020:
 
-<img src="Visualizations/2020/matplotlib/Email_campaigns_by_series_2020.png" alt="Email campaigns 2020" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2020/plotly/email_charts/emails_2020.png" width="800"/>
 
 The line graph below illustrates session attendance for all ECHO series offered in 2020:
 
-<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2020_attendance_chart.jpg" alt="session attendance 2020" width="800"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/attendance_charts/cumulative_2020_attendance_chart.jpg" alt="session attendance 2020" width="800"/>
 
 The bubble chart below depicts the attendance by region for each ECHO Idaho series offered in 2020:
 
-<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2020_map.jpg" width = "800"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2020/plotly/maps/2020_cumulative_map.png" width = "800"/>
 
 Because the initial session of ECHO Idaho's COVID-19 series drew 600 attendees, the datapoint for that session, while accurate, represents a considerable outliar. Below is a graph representing the 2020 data with the outliars removed.
 
-<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2020_attendance_chart%20-%20sans_outliars.jpg" alt="session attendance 2020 sans outliars" width="800"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/attendance_charts/cumulative_2020_attendance_chart%20-%20sans_outliars.jpg" width="800"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2020 series against the number of individuals who received emails about the series. 
 
-<img src="Visualizations/2020/matplotlib/Email_v_attendance_BH_in_PC_2020.png" alt="BH in PC email v attendance 2020" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2020/plotly/att_and_email_charts/att_v_emails_bhpc_2020.png" width="800"/>
 
-<img src="Visualizations/2020/matplotlib/Email_v_attendance_OPSUD_2020.png" alt="OPSUD email v attendance 2020" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2020/plotly/att_and_email_charts/att_v_emails_opsud_2020.png" width="800"/>
 
-<img src="Visualizations/2020/matplotlib/Email_v_attendance_COVID_2020.png" alt="COVID email v attendance 2020" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2020/plotly/att_and_email_charts/att_v_emails_covid_2020.png" width="800"/>
 
-<img src="Visualizations/2020/matplotlib/Email_v_attendance_PALTC_2020.png" alt="PALTC email v attendance 2020" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2020/plotly/att_and_email_charts/att_v_emails_paltc_2020.png" width="800"/>
 
-<img src="Visualizations/2020/matplotlib/Email_v_attendance_PSUD_2020.png" alt="PSUD email v attendance 2020" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/att_and_email_charts/att_v_email_syphilis_cumulative.jpg" width="800"/>
 
-<img src="Visualizations/2020/matplotlib/Email_v_attendance_Syphilis_2020.png" alt="Syphilis email v attendance 2020" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2020/plotly/att_and_email_charts/att_v_emails_psud_2020.png" width="800"/>
 
 >**FINDING:**
 >The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
@@ -171,33 +171,33 @@ The line graphs below illustrate the relationship between session attendance for
 
 The barchart below shows the quantity of emails sent for all available ECHO series in 2021:
 
-<img src="Visualizations/2021/matplotlib/Email_campaigns_by_series_2021.png" alt="Emails by series 2021" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2021/plotly/email_charts/emails_2021.png" width="800"/>
 
 The line graph below illustrates session attendance for all ECHO series offered in 2021:
 
-<img src="Visualizations/2021/matplotlib/Session_attendance_2021.png" alt="Session attendance 2021" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/attendance_charts/cumulative_2021_attendance_chart.jpg" width="800"/>
 
 The bubble chart below depicts the attendance by region for each ECHO Idaho series offered in 2021:
 
-<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/cumulative_2021_map.jpg" width = "800"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2021/plotly/maps/2021_cumulative_map.png" width = "800"/>
 
 The line graphs below illustrate the relationship between session attendance for ECHO Idaho's 2021 series against the number of individuals who received emails about the series. 
 
-<img src="Visualizations/2021/matplotlib/Email_v_attendance_BH_in_PC_2021.png" alt="BH in PC email v attendance 2021" width="400"/> 
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2021/plotly/att_and_email_charts/att_v_emails_bhpc_2021.png" width="800"/> 
 
-<img src="Visualizations/2021/matplotlib/Email_v_attendance_OPSUD_2021.png" alt="OPSUD email v attendance 2021" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2021/plotly/att_and_email_charts/att_v_emails_opsud_2021.png" width="800"/>
 
-<img src="Visualizations/2021/matplotlib/Email_v_attendance_COVID_2021.png" alt="COVID email v attendance 2021" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2021/plotly/att_and_email_charts/att_v_emails_covid_2021.png" width="800"/>
 
-<img src="Visualizations/2021/matplotlib/Email_v_attendance_PALTC_2021.png" alt="PALTC email v attendance 2021" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2021/plotly/att_and_email_charts/att_v_emails_paltc_2021.png" width="800"/>
 
-<img src="Visualizations/2021/matplotlib/Email_v_attendance_PSUD_2021.png" alt="PSUD email v attendance 2021" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2021/plotly/att_and_email_charts/att_v_emails_psud_2021.png" width="800"/>
 
-<img src="Visualizations/2021/matplotlib/Email_v_attendance_CTSUDs_2021.png" alt="CTSUDs email v attendnace 2021" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/att_and_email_charts/att_v_email_pbh_cumulative.jpg" width="800"/>
 
-<img src="Visualizations/2021/matplotlib/Email_v_attendance_PBH_2021.png" alt="PBH email v attendance 2021" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/att_and_email_charts/att_v_email_ctsuds_cumulative.jpg" width="800"/>
 
-<img src="Visualizations/2021/matplotlib/Email_v_attendance_VHLC_2021.png" alt="VHLC email v attendance 2021" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/att_and_email_charts/att_v_email_vhlc_cumulative.jpg" width="800"/>
 
 > **FINDING:**
 > The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
@@ -206,43 +206,43 @@ The line graphs below illustrate the relationship between session attendance for
 
 The barchart below shows the quantity of emails sent for all available ECHO series from 2018-2021:
 
-<img src="Visualizations/Cumulative/matplotlib/Email_campaigns_by_series_2018-2022.png" alt="Cumulative email campaigns" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/Email_campaigns_2018-2022.jpg" width="800"/>
 
 The line graphs below illustrate the relationship between session attendance for each of ECHO Idaho's  series against the number of individuals who received emails about the series, from the start of the series to the end of the series or the end of the 2021 calendar year. 
 
-<img src="Visualizations/Cumulative/matplotlib/Email_v_attendance_OPSUD_cumulative.png" alt="OPSUD email v attendance cumulative" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/cumulative_emails_bhpc.jpg" alt="bhpc email v attendance cumulative" width="800"/>
 
-<img src="Visualizations/Cumulative/matplotlib/Email_v_attendance_BH_in_PC_cumulative.png" alt="BH in PC email v attendance cumulative" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/cumulative_emails_opsud.jpg" alt="OPSUD email v attendance cumulative" width="800"/>
 
-<img src="Visualizations/Cumulative/matplotlib/Email_v_attendance_COVID_cumulative.png" alt="COVID email v attendance cumulative" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/cumulative_emails_covid.jpg" alt="COVID email v attendance cumulative" width="800"/>
 
-<img src="Visualizations/Cumulative/matplotlib/Email_v_attendance_PALTC_cumulative.png" alt="PALTC email v attendance cumulative" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/cumulative_emails_paltc.jpg" alt="PALTC email v attendance cumulative" width="800"/>
 
-<img src="Visualizations/Cumulative/matplotlib/Email_v_attendance_CTSUDs_cumulative.png" alt="CTSUDs email v attendance cumulative" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/cumulative_emails_ctsuds.jpg" alt="CTSUDs email v attendance cumulative" width="800"/>
 
-<img src="Visualizations/Cumulative/matplotlib/Email_v_attendance_PSUD_cumulative.png" alt="PSUD email v attendance cumulative" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/cumulative_emails_psud.jpg" alt="PSUD email v attendance cumulative" width="800"/>
 
-<img src="Visualizations/Cumulative/matplotlib/Email_v_attendance_PBH_cumulative.png" alt="PBH email v attendance cumulative" width="400"/>  
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/cumulative_emails_pbh.jpg" alt="PBH email v attendance cumulative" width="800"/>  
 
-<img src="Visualizations/Cumulative/matplotlib/Email_v_attendance_Syphilis_cumulative.png" alt="Syphilis email v attendance cumulative" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/cumulative_emails_syphilis.jpg" alt="Syphilis email v attendance cumulative" width="800"/>
 
-<img src="Visualizations/Cumulative/matplotlib/Email_v_attendance_VHLC_cumulative.png" alt="VHLC email v attendance cumulative" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/email_charts/cumulative_emails_vhlc.jpg" alt="VHLC email v attendance cumulative" width="800"/>
 
 The scatter plot below illustrates the growth of ECHO Idaho's programs by new attendees over time:
 
-<img src="Visualizations/Cumulative/matplotlib/New_attendees_per_session_cumulative.png" alt="New attendees per session cumulative" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/matplotlib/New_attendees_per_session_cumulative.png" alt="New attendees per session cumulative" width="800"/>
 
 Here is the same data color-coordinated to show which series brought in new participants, and when:
 
-<img src="Visualizations/Cumulative/matplotlib/New_attendees_by_series_cumulative.png" alt="New attendees by series" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/matplotlib/New_attendees_by_series_cumulative.png" alt="New attendees by series" width="800"/>
 
 The scatter plot below illustrates the net growth of ECHO's population by new attendees over time:
 
-<img src="Visualizations/Cumulative/matplotlib/Net_attendance_growth_cumulative.png" alt="Net attendance growth" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/matplotlib/Net_attendance_growth_cumulative.png" alt="Net attendance growth" width="800"/>
 
 Here is the same data color-coordinated to show which series brought in new participants, and when:
 
-<img src="Visualizations/Cumulative/matplotlib/Net_attendance_growth_by_series_cumulative.png" alt="Net attendance by series" width="400"/>
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/matplotlib/Net_attendance_growth_by_series_cumulative.png" alt="Net attendance by series" width="800"/>
 
 >**FINDING:**
 >The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
