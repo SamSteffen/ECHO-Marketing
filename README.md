@@ -3,7 +3,7 @@ The following is a visualization project analyzing various Mail Chimp email mark
 
 ## Overview
 ### ECHO Idaho Program Structure
-ECHO Idaho is a free, virtual continuing education platform available for Idaho healthcare professionals. Housed at the University of Idaho, WWAMI Medical Education Program, the program is Idaho's only available chapter of the Extensions for Community Healthcare Outcomes organization, a global initiative intended to improve patient healthcare outcomes in rural and underserved communities through the democratization of expertise. The program is grant funded.
+[ECHO Idaho](https://www.uidaho.edu/academics/wwami/echo) is a free, virtual continuing education platform available for Idaho healthcare professionals. Housed at the University of Idaho, WWAMI Medical Education Program, the program is Idaho's only available chapter of the Extensions for Community Healthcare Outcomes organization, a global initiative intended to improve patient healthcare outcomes in rural and underserved communities through the democratization of expertise. The program is grant funded.
 
 ECHO Idaho was initiated in 2018 with a single series focusing on Opioid and Addiction Treatment. Since its inception, the program has proliferated to span 10 different series on a variety of healthcare topics, and now has registered more than 3,000 unduplicated Idaho healthcare professionals in its community. Series typically offer hour-long sessions twice a month over the lunch-hour, Monday through Thursday. Each series features an interdisciplinary panel of experts who facilitate the conversation during each session; each session features a 20-30 minute didactic presentation as well as a real de-identified case presentation presented by a volunteer.
 
@@ -54,10 +54,10 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 
 ### ECHO Series Offered by Year
 #### 2018    
-- Opioid Addiction and Treatment series (eventually became "Opioids, Pain and Substance Use 
+- [Opioid Addiction and Treatment series](https://www.uidaho.edu/academics/wwami/echo/current-series/opioid-program) (eventually became "Opioids, Pain and Substance Use 
        Disorders" in Jan. 2021, hereafter abbreviated "**OPSUD**")
-- Behavioral Health in Primary Care series (hereafter abbreviated "**BH in PC**") 
-- MAT Waiver Training (eventually renamed "X-Waiver Training", hereafter abbreviated "**XWT**")
+- [Behavioral Health in Primary Care series](https://www.uidaho.edu/academics/wwami/echo/current-series/behavioral-health) (hereafter abbreviated "**BH in PC**") 
+- [MAT Waiver Training](https://www.uidaho.edu/academics/wwami/echo/xwaiver) (eventually renamed "X-Waiver Training", hereafter abbreviated "**XWT**")
 
 #### 2019    
 - OPSUD
@@ -68,10 +68,10 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 - OPSUD
 - BH in PC
 - XWT
-- COVID-19 series (hereafter abbreviated "**COVID**")
-- Syphilis in Pregnancy series (hereafter abbreviated "**Syphilis**")
-- Perinatal Substance Use Disorder series (hereafter abbreviated "**PSUD**")
-- COVID-19 Nursing-Home Safety series (eventually re-name COVID-19 Safety for Post-Acute and Long-Term Care facilities, hereafter abbreviated "**PALTC**")
+- [COVID-19 series](https://www.uidaho.edu/academics/wwami/echo/current-series/covid-19) (hereafter abbreviated "**COVID**")
+- [Syphilis in Pregnancy series](https://www.uidaho.edu/academics/wwami/echo/past-series/syphilis) (hereafter abbreviated "**Syphilis**")
+- [Perinatal Substance Use Disorder series](https://www.uidaho.edu/academics/wwami/echo/past-series/perinatal-substance-2021) (hereafter abbreviated "**PSUD**")
+- [COVID-19 Nursing-Home Safety series](https://www.uidaho.edu/academics/wwami/echo/past-series/nursing-home) (eventually re-name COVID-19 Safety for Post-Acute and Long-Term Care facilities, hereafter abbreviated "**PALTC**")
 
 #### 2021    
 - OPSUD
@@ -80,8 +80,8 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 - COVID
 - PALTC
 - PSUD
-- Pediatric Behavioral Health (hereafter abbreviated "**PBH**")
-- Hepatitis C (eventually renamed "Viral Hepatitis and Liver Care", hereafter abbreviated "**VHLC**")
+- [Pediatric Behavioral Health](https://www.uidaho.edu/academics/wwami/echo/past-series/pediatric-behavioral-health) (hereafter abbreviated "**PBH**")
+- [Hepatitis C](https://www.uidaho.edu/academics/wwami/echo/current-series/hepatitis-c) (eventually renamed "Viral Hepatitis and Liver Care", hereafter abbreviated "**VHLC**")
 - Counseling Techniques for Substance Use Disorders (herafter abbreviated "**CTSUDs**")
 
 ### 2018 Analysis
