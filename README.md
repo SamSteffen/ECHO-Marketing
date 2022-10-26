@@ -82,7 +82,9 @@ To illustrate the impact of email campaigns on ECHO Idaho's series by attendance
 - PSUD
 - [Pediatric Behavioral Health](https://www.uidaho.edu/academics/wwami/echo/past-series/pediatric-behavioral-health) (hereafter abbreviated "**PBH**")
 - [Hepatitis C](https://www.uidaho.edu/academics/wwami/echo/current-series/hepatitis-c) (eventually renamed "Viral Hepatitis and Liver Care", hereafter abbreviated "**VHLC**")
-- Counseling Techniques for Substance Use Disorders (herafter abbreviated "**CTSUDs**")
+- Counseling Techniques for Substance Use Disorders (herafter abbreviated "**CTSUDs**")   
+
+---
 
 ### 2018 Analysis
 
@@ -105,8 +107,9 @@ The line graphs below illustrates the relationship between session attendance fo
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2018/plotly/att_and_email_charts/att_v_emails_2018_opsud.png" width="800"/>
 
 > **FINDING:**
-> The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails for the Opioid series, attendance at the ECHO sessions remained relatively constant over time. For the BH in PC series, the quantity of email recipients remains constant while the session attendance gradually declines.
+> The above charts illustrate that despite rapid increase in the number of people who receive ECHO Idaho day-of campaign emails for the Opioid series, attendance at the ECHO sessions remained relatively constant over time. For the BH in PC series, the quantity of email recipients remains constant while the session attendance gradually declines.   
 
+---
 
 ### 2019 Analysis
 
@@ -130,7 +133,9 @@ The line graphs below illustrate the relationship between session attendance for
 
 
 > **FINDING:**
-> The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+> The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.   
+
+---
 
 ### 2020 Analysis
 
@@ -165,7 +170,9 @@ The line graphs below illustrate the relationship between session attendance for
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/2020/plotly/att_and_email_charts/att_v_emails_psud_2020.png" width="800"/>
 
 >**FINDING:**
->The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+>The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.   
+
+---
 
 ### 2021 Analysis
 
@@ -200,7 +207,9 @@ The line graphs below illustrate the relationship between session attendance for
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/plotly/att_and_email_charts/att_v_email_vhlc_cumulative.jpg" width="800"/>
 
 > **FINDING:**
-> The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+> The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.   
+
+---
 
 ### Cumulative Analysis (2018-2021)
 
@@ -245,10 +254,11 @@ Here is the same data color-coordinated to show which series brought in new part
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/matplotlib/Net_attendance_growth_by_series_cumulative.png" alt="Net attendance by series" width="800"/>
 
 >**FINDING:**
->The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.
+>The above charts illustrate that despite continued increase in the number of people who receive ECHO Idaho day-of campaign emails, attendance at the ECHO sessions remains relatively constant over time.   
 
+---
 
-### Summary
+## Summary
 - The efficacy of daily email campaigns on program attendance (the relationship between email open-rates and session attendance).
 - The efficacy of weekly email campaigns on program attendance (the realtionship between email open-rates and session attendance).
 - What can be learned from the ECHO sessions with the best attendance and the type of email campaign that was used to promote it? 
