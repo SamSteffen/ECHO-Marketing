@@ -1,19 +1,22 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 #import dependencies
 import pandas as pd
 import os
 import numpy as np
 from datetime import datetime as dt
+import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+import seaborn as sns
 import plotly.express as px
 import plotly
 import plotly.offline as py
 import plotly.graph_objs as go
+from dash import Dash, dcc, Output, Input  # pip install dash
+import dash_bootstrap_components as dbc    # pip install dash-bootstrap-components
+import plotly.express as px
 
-#name the current filepath
-cwd = os.getcwd()
-
+######################################################STEP 1
+# incorporate data into app
 data_file_path = 'C:\\Users\\ssteffen\\University of Idaho\\Storage-Boise - ECHO\\Staff\\Sam\\Data\\Spreadsheets\\Email data\\email_data.csv'
 
 # read the data into a dataframe
@@ -876,54 +879,53 @@ CTSUDs_daily_2021_df = daily_emails_2021_df.loc[(daily_emails_2021_df['Series'] 
 CTSUDs_daily_2021_date_list = CTSUDs_daily_2021_df['Date'].to_list()
 CTSUDs_daily_2021_recips_list = CTSUDs_daily_2021_df['Successful Deliveries'].to_list()
 
+#########################################################STEP 2
+# Build your components
+app = Dash(__name__, external_stylesheets=[dbc.themes.SOLAR])
+mytitle = dcc.Markdown(children='# ECHO Idaho Email Campaign Data')
+mytitle2 = dcc.Markdown(children='# ECHO Idaho Participation Data by Series')
+mytitle3 = dcc.Markdown(children='# ECHO Idaho Participation Data By Region')
+mybarchart = dcc.Graph(figure={})
+mylinegraph = dcc.Graph(figure={})
+mymap = dcc.Graph(figure={})
+dropdown = dcc.Dropdown(options=['2021','2020', '2019', '2018'],
+                        value='2021',  # initial value displayed when page first loads
+                        clearable=False)
 
-####################### EMAIL STAT FIGS #########################
-# series_totals_df
-fig = px.bar(series_totals_df, x='Email Count', y='Series',
-             hover_data=['Email Count', 'Series'], 
-             color='Series',
-             labels={'Series':'ECHO Email Campaign', 'Email Count':'Email Quantity'},
-             title='Email Campaigns by ECHO Series (2018-2022)',
-             category_orders={'Series': ['Podcast','Syphilis','MOUD','Special','PBH','Newsletter','XWT','PedsASD','PSUD','CTSUDs','PALTC','VHLC','COVID','BH in PC','OPSUD','Weekly']},
-             color_discrete_map={'Weekly':'indigo', 'OPSUD':'gold', 'BH in PC':'blue', 'COVID':'gray', 'VHLC':'gray', 'PALTC':'gray', 'CTSUDs':'gold', 'PSUD':'gold', 'PedsASD':'blue', 'XWT':'gold', 'Newsletter':'crimson', 'PBH':'blue', 'Special':'crimson', 'MOUD':'gold', 'Syphilis':'gray', 'Podcast':'black'},
-             height=600)
-fig.show()
+# Customize your own Layout
+app.layout = dbc.Container([
+    dbc.Row([
+        dbc.Col([mytitle], width=12)
+    ], justify='center'),
+    dbc.Row([
+        dbc.Col([mybarchart], width=12)
+    ]),
+    dbc.Row([
+        dbc.Col([dropdown], width=6)
+    ], justify='center'),
+    dbc.Row([
+        dbc.Col([mytitle2], width=12)
+    ], justify='center'),
+    dbc.Row([
+        dbc.Col([mylinegraph], width=12)
+    ], justify='center'),
+    dbc.Row([
+        dbc.Col([mytitle3], width=12)
+    ], justify='center'),
+    dbc.Row([
+        dbc.Col([mymap], width=12)
+    ], justify='center'),
+], fluid=True)
 
-#Visualize Table #2 w/ Plotly for 2018 only
-fig = px.bar(series_totals_2018_df, x='Email Count', y='Series',
-             hover_data=['Email Count', 'Series'], 
-             color='Series',
-             labels={'Series':'ECHO Email Campaign', 'Email Count':'Email Quantity'},
-             title='Email Campaigns by ECHO Series (2018)',
-             category_orders={'Series': ['XWT','BH in PC','OPSUD','Weekly']},
-             color_discrete_map={'Weekly':'indigo', 'OPSUD':'gold', 'BH in PC':'blue', 'XWT':'gold'},
-             height=400)
-fig.show()
+# Callback allows components to interact
+@app.callback(
+    Output(mybarchart, component_property='figure'),
+    Input(dropdown, component_property='value')
+)
 
-#Visualize Table #2 w/ Plotly for 2019 only
-fig = px.bar(series_totals_2019_df, x='Email Count', y='Series',
-             hover_data=['Email Count', 'Series'], 
-             color='Series',
-             labels={'Series':'ECHO Email Campaign', 'Email Count':'Email Quantity'},
-             title='Email Campaigns by ECHO Series (2019)',
-             category_orders={'Series': ['Special', 'XWT', 'OPSUD', 'BH in PC', 'Weekly']},
-             color_discrete_map={'Weekly':'indigo', 'OPSUD':'gold', 'BH in PC':'blue', 'XWT':'gold', 'Special':'crimson'},
-             height=400)
-fig.show()
-
-#Visualize Table #2 w/ Plotly for 2020
-fig = px.bar(series_totals_2020_df, x='Email Count', y='Series',
-             hover_data=['Email Count', 'Series'], 
-             color='Series',
-             labels={'Series':'ECHO Email Campaign', 'Email Count':'Email Quantity'},
-             title='Email Campaigns by ECHO Series (2020)',
-             category_orders={'Series': ['Special','XWT','Newsletter','Syphilis','PALTC','PSUD','OPSUD','BH in PC','COVID','Weekly']},
-             color_discrete_map={'Weekly':'indigo', 'OPSUD':'gold', 'BH in PC':'blue', 'COVID':'gray', 'PALTC':'gray', 'PSUD':'gold', 'XWT':'gold', 'Newsletter':'crimson', 'Special':'crimson', 'Syphilis':'gray'},
-             height=400)
-fig.show()
-
-#Visualize Table #2 w/ Plotly for 2021
-fig = px.bar(series_totals_2021_df, x='Email Count', y='Series',
+def update_mybarchart(user_input):  # function arguments come from the component property of the Input
+    if user_input == '2021':
+        fig = px.bar(series_totals_2021_df, x='Email Count', y='Series',
              hover_data=['Email Count', 'Series'], 
              color='Series',
              labels={'Series':'ECHO Email Campaign', 'Email Count':'Email Quantity'},
@@ -931,496 +933,159 @@ fig = px.bar(series_totals_2021_df, x='Email Count', y='Series',
              category_orders={'Series': ['Special','XWT','PedsASD','Newsletter','PBH','PSUD','CTSUDs','VHLC','PALTC','COVID','BH in PC','OPSUD','Weekly']},
              color_discrete_map={'Weekly':'indigo', 'OPSUD':'gold', 'BH in PC':'blue', 'COVID':'gray', 'PALTC':'gray', 'VHLC':'gray', 'CTSUDs':'gold', 'PSUD':'gold', 'PBH':'blue','Newsletter':'crimson', 'PedsASD':'blue','XWT':'gold', 'Special':'crimson'},
              height=600)
-fig.show()
-
-######################### MAP FIGS ############################
-# map the cumulative iecho 2018 data using PLOTLY
-fig = px.scatter_geo(series_by_location_2018_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "BH in PC":"blue",
-                        "OPSUD":"gold",
-                        "XWT":"orange"
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho Cumulative Attendance Data (2018)',
-        geo_scope='usa')
-
-fig.show()
-
-# map the cumulative iecho 2019 data using PLOTLY
-fig = px.scatter_geo(series_by_location_2019_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "BH in PC":"blue",
-                        "OPSUD":"gold",
-                        "XWT":"orange"
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho Cumulative Attendance Data (2019)',
-        geo_scope='usa')
-
-fig.show()
-
-# map the cumulative iecho 2020 data using PLOTLY
-fig = px.scatter_geo(series_by_location_2020_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "BH in PC":"blue",
-                        "OPSUD":"gold",
-                        "XWT":"orange",
-                        "COVID":"gray",
-                        "PALTC":"gainsboro",
-                        "Syphilis":"silver",
-                        "PSUD":"yellow"
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho Cumulative Attendance Data (2020)',
-        geo_scope='usa')
-
-fig.show()
-
-# map the cumulative iecho 2021 data using PLOTLY
-fig = px.scatter_geo(series_by_location_2021_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "BH in PC":"blue",
-                        "OPSUD":"gold",
-                        "XWT":"orange",
-                        "COVID":"gray",
-                        "PALTC":"gainsboro",
-                        "PSUD":"yellow",
-                        "PBH":"dodgerblue",
-                        "VHLC":"mediumslateblue",
-                        "CTSUDs":"olive"
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho Cumulative Attendance Data (2021)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2018 OPSUD data 
-fig = px.scatter_geo(mappable_2018_OPSUD_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "OPSUD":"gold",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho OPSUD Attendance Data (2018)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2019 OPSUD data 
-fig = px.scatter_geo(mappable_2019_OPSUD_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "OPSUD":"gold",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho OPSUD Attendance Data (2019)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2020 OPSUD data 
-fig = px.scatter_geo(mappable_2020_OPSUD_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "OPSUD":"gold",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho OPSUD Attendance Data (2020)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2021 OPSUD data 
-fig = px.scatter_geo(mappable_2021_OPSUD_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "OPSUD":"gold",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho OPSUD Attendance Data (2021)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2018 BH in PC data 
-fig = px.scatter_geo(mappable_2018_BHPC_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "BH in PC":"blue",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho BH in PC Attendance Data (2018)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2019 BH in PC data 
-fig = px.scatter_geo(mappable_2019_BHPC_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "BH in PC":"blue",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho BH in PC Attendance Data (2019)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2020 BH in PC data 
-fig = px.scatter_geo(mappable_2020_BHPC_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "BH in PC":"blue",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho BH in PC Attendance Data (2020)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2021 BH in PC data 
-fig = px.scatter_geo(mappable_2021_BHPC_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "BH in PC":"blue",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho BH in PC Attendance Data (2021)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2018 XWT data 
-fig = px.scatter_geo(mappable_2018_XWT_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "XWT":"orange",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho XWT Attendance Data (2018)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2019 XWT data 
-fig = px.scatter_geo(mappable_2019_XWT_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "XWT":"orange",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho XWT Attendance Data (2019)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2020 XWT data 
-fig = px.scatter_geo(mappable_2020_XWT_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "XWT":"orange",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho XWT Attendance Data (2020)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2021 XWT data 
-fig = px.scatter_geo(mappable_2021_XWT_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "XWT":"orange",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho XWT Attendance Data (2021)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2020 COVID data
-fig = px.scatter_geo(mappable_2020_COVID_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "COVID":"gray",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho COVID-19 Attendance Data (2020)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2021 COVID data
-fig = px.scatter_geo(mappable_2021_COVID_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "COVID":"gray",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho COVID-19 Attendance Data (2021)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2020 Syphilis data
-fig = px.scatter_geo(mappable_2020_Syphilis_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "Syphilis":"silver",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho Syphilis Attendance Data (2020)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2020 PSUD data
-fig = px.scatter_geo(mappable_2020_PSUD_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "PSUD":"yellow",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho PSUD Attendance Data (2020)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2021 PSUD data
-fig = px.scatter_geo(mappable_2021_PSUD_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "PSUD":"yellow",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho PSUD Attendance Data (2021)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2021 PBH data
-fig = px.scatter_geo(mappable_2021_PBH_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "PBH":"dodgerblue",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho PBH Attendance Data (2021)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2021 VHLC data
-fig = px.scatter_geo(mappable_2021_VHLC_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "VHLC":"mediumslateblue",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho VHLC Attendance Data (2021)',
-        geo_scope='usa')
-
-fig.show()
-
-# map 2021 CTSUDs data
-fig = px.scatter_geo(mappable_2021_CTSUDs_df,
-                    lat="latitude",
-                    lon="longitude",
-                    color="Series",
-                    color_discrete_map={
-                        "CTSUDs":"olive",
-                    },
-                    hover_name="Health Center City", 
-                    size="Attendees per Zip",
-                    center=dict(lon=-114.15, lat=44.65)
-                    )
-
-fig.update_layout(
-        title = 'ECHO Idaho CTSUDs Attendance Data (2021)',
-        geo_scope='usa')
-
-fig.show()
-
-
-###################### CHART FIGS #####################
-#plot the 2018 session attendance data using Plotly, a multi-line graph
-fig1 = px.line(non_XWT_attendance_2018_df, x='Date', y='Attendance',
+
+    elif user_input == '2020':
+        fig = px.bar(series_totals_2020_df, x='Email Count', y='Series',
+             hover_data=['Email Count', 'Series'], 
+             color='Series',
+             labels={'Series':'ECHO Email Campaign', 'Email Count':'Email Quantity'},
+             title='Email Campaigns by ECHO Series (2020)',
+             category_orders={'Series': ['Special','XWT','Newsletter','Syphilis','PALTC','PSUD','OPSUD','BH in PC','COVID','Weekly']},
+             color_discrete_map={'Weekly':'indigo', 'OPSUD':'gold', 'BH in PC':'blue', 'COVID':'gray', 'PALTC':'gray', 'PSUD':'gold', 'XWT':'gold', 'Newsletter':'crimson', 'Special':'crimson', 'Syphilis':'gray'},
+             height=400)
+
+    elif user_input == '2019':
+        fig = px.bar(series_totals_2019_df, x='Email Count', y='Series',
+             hover_data=['Email Count', 'Series'], 
+             color='Series',
+             labels={'Series':'ECHO Email Campaign', 'Email Count':'Email Quantity'},
+             title='Email Campaigns by ECHO Series (2019)',
+             category_orders={'Series': ['Special', 'XWT', 'OPSUD', 'BH in PC', 'Weekly']},
+             color_discrete_map={'Weekly':'indigo', 'OPSUD':'gold', 'BH in PC':'blue', 'XWT':'gold', 'Special':'crimson'},
+             height=400)
+
+    elif user_input == '2018':
+        fig = px.bar(series_totals_2018_df, x='Email Count', y='Series',
+             hover_data=['Email Count', 'Series'], 
+             color='Series',
+             labels={'Series':'ECHO Email Campaign', 'Email Count':'Email Quantity'},
+             title='Email Campaigns by ECHO Series (2018)',
+             category_orders={'Series': ['XWT','BH in PC','OPSUD','Weekly']},
+             color_discrete_map={'Weekly':'indigo', 'OPSUD':'gold', 'BH in PC':'blue', 'XWT':'gold'},
+             height=400)
+
+    return fig  # returned objects are assigned to the component property of the Output
+
+@app.callback(
+    Output(mylinegraph, component_property='figure'),
+    Input(dropdown, component_property='value')
+)
+
+def update_mylinegraph(user_input):
+    if user_input == '2021':
+        fig_a = px.line(non_XWT_attendance_2021_df, x='Date', y='Attendance',
+                    hover_data=['Clinic Name', 'Date', 'Session Topic','Attendance'],
+                    color='Clinic Name',
+                    labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
+                    color_discrete_map={'BH in PC':'blue', 
+                                        'OPSUD':'gold', 
+                                        'COVID':'gray', 
+                                        'PALTC':'gainsboro', 
+                                        'PSUD':'yellow', 
+                                        'CTSUDs':'olive', 
+                                        'VHLC':'mediumslateblue',
+                                        'PBH':'dodgerblue'},
+                    height=400)
+
+        #isolate the XWT data in a separate DF
+        fig_b = px.scatter(XWT_attendance_2021_df, x="Date", y="Attendance",
+                        color = 'Clinic Name',
+                        size = 'Attendance',
+                        hover_data={'Date':'|%B %d, %Y'},
+                        labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
+                        color_discrete_map={'XWT':'orange'},
+                        height=400)
+
+        fig2 = go.Figure(data=fig_a.data + fig_b.data)
+
+        fig2.update_xaxes(
+            dtick="M1",
+            tickformat="%b\n%Y")
+
+        fig2.update_layout(
+            title="ECHO Attendance by Series (2021)",
+            xaxis_title="Date",
+            yaxis_title="Participant Attendance",
+            legend_title="Series"
+            )
+
+    elif user_input == '2020':
+        fig_a = px.line(non_XWT_attendance_2020_df, x='Date', y='Attendance',
+                    hover_data=['Clinic Name', 'Date', 'Session Topic','Attendance'],
+                    color='Clinic Name',
+                    labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
+                    color_discrete_map={'BH in PC':'blue', 
+                                        'OPSUD':'gold', 
+                                        'COVID':'gray', 
+                                        'PALTC':'gainsboro', 
+                                        'PSUD':'yellow', 
+                                        'Syphilis':'silver'},
+                    height=400)
+
+        #isolate the XWT data in a separate DF
+        fig_b = px.scatter(XWT_attendance_2020_df, x="Date", y="Attendance",
+                        color = 'Clinic Name',
+                        size = 'Attendance',
+                        hover_data={'Date':'|%B %d, %Y'},
+                        labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
+                        color_discrete_map={'XWT':'orange'},
+                        height=400)
+
+        fig2 = go.Figure(data=fig_a.data + fig_b.data)
+
+        fig2.update_xaxes(
+            dtick="M1",
+            tickformat="%b\n%Y")
+
+        fig2.update_layout(
+            title="ECHO Attendance by Series (2020)",
+            xaxis_title="Date",
+            yaxis_title="Participant Attendance",
+            legend_title="Series"
+            )
+
+    elif user_input == '2019':
+        # non_XWT_attendance_2019
+        fig_a = px.line(non_XWT_attendance_2019, x='Date', y='Attendance',
+                    hover_data=['Clinic Name', 'Date', 'Session Topic','Attendance'],
+                    color='Clinic Name',
+                    labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
+                    color_discrete_map={'OPSUD':'gold', 'BH in PC':'blue'},
+                    height=400)
+
+        #isolate the XWT data in a separate DF
+        fig_b = px.scatter(XWT_attendance_2019_df, x="Date", y="Attendance",
+                        color = 'Clinic Name',
+                        size = 'Attendance',
+                        hover_data={'Date':'|%B %d, %Y'},
+                        labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
+                        color_discrete_map={'XWT':'orange'},
+                        height=400)
+
+        fig2 = go.Figure(data=fig_a.data + fig_b.data)
+
+        fig2.update_xaxes(
+            dtick="M1",
+            tickformat="%b\n%Y")
+
+        fig2.update_layout(
+            title="ECHO Attendance by Series (2019)",
+            xaxis_title="Date",
+            yaxis_title="Participant Attendance",
+            legend_title="Series"
+            )
+
+    elif user_input == '2018':
+        fig_a = px.line(non_XWT_attendance_2018_df, x='Date', y='Attendance',
              hover_data=['Clinic Name', 'Date', 'Session Topic','Attendance'],
              color='Clinic Name',
              labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
              color_discrete_map={'OPSUD':'gold', 'BH in PC':'blue'},
              height=400)
 
-#isolate the XWT data in a separate DF
-# XWT_attendance_2018_df
-fig2 = px.scatter(XWT_attendance_2018_df, x="Date", y="Attendance",
+        #isolate the XWT data in a separate DF
+        # XWT_attendance_2018_df
+        fig_b = px.scatter(XWT_attendance_2018_df, x="Date", y="Attendance",
                  color = 'Clinic Name',
                  size = 'Attendance',
                  hover_data={'Date':'|%B %d, %Y'},
@@ -1428,584 +1093,116 @@ fig2 = px.scatter(XWT_attendance_2018_df, x="Date", y="Attendance",
                  color_discrete_map={'XWT':'orange'},
                  height=400)
 
-fig3 = go.Figure(data=fig1.data + fig2.data)
-
-fig3.update_xaxes(
-    dtick="M1",
-    tickformat="%b\n%Y")
-
-fig3.update_layout(
-    title="ECHO Attendance by Series (2018)",
-    xaxis_title="Date",
-    yaxis_title="Participant Attendance",
-    legend_title="Series"
-    )
-
-fig3.show()
-
-
-#plot the 2019 session attendance data using Plotly, a multi-line graph
-# non_XWT_attendance_2019
-fig1 = px.line(non_XWT_attendance_2019, x='Date', y='Attendance',
-             hover_data=['Clinic Name', 'Date', 'Session Topic','Attendance'],
-             color='Clinic Name',
-             labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
-             color_discrete_map={'OPSUD':'gold', 'BH in PC':'blue'},
-             height=400)
-
-#isolate the XWT data in a separate DF
-XWT_attendance_2019_df
-fig2 = px.scatter(XWT_attendance_2019_df, x="Date", y="Attendance",
-                 color = 'Clinic Name',
-                 size = 'Attendance',
-                 hover_data={'Date':'|%B %d, %Y'},
-                 labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
-                 color_discrete_map={'XWT':'orange'},
-                 height=400)
-
-fig3 = go.Figure(data=fig1.data + fig2.data)
-
-fig3.update_xaxes(
-    dtick="M1",
-    tickformat="%b\n%Y")
-
-fig3.update_layout(
-    title="ECHO Attendance by Series (2019)",
-    xaxis_title="Date",
-    yaxis_title="Participant Attendance",
-    legend_title="Series"
-    )
-
-fig3.show()
-
-#plot the 2020 session attendance data using Plotly, a multi-line graph
-fig1 = px.line(non_XWT_attendance_2020_df, x='Date', y='Attendance',
-             hover_data=['Clinic Name', 'Date', 'Session Topic','Attendance'],
-             color='Clinic Name',
-             labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
-             color_discrete_map={'BH in PC':'blue', 
-                                 'OPSUD':'gold', 
-                                 'COVID':'gray', 
-                                 'PALTC':'gainsboro', 
-                                 'PSUD':'yellow', 
-                                 'Syphilis':'silver'},
-             height=400)
-
-#isolate the XWT data in a separate DF
-fig2 = px.scatter(XWT_attendance_2020_df, x="Date", y="Attendance",
-                 color = 'Clinic Name',
-                 size = 'Attendance',
-                 hover_data={'Date':'|%B %d, %Y'},
-                 labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
-                 color_discrete_map={'XWT':'orange'},
-                 height=400)
-
-fig3 = go.Figure(data=fig1.data + fig2.data)
-
-fig3.update_xaxes(
-    dtick="M1",
-    tickformat="%b\n%Y")
-
-fig3.update_layout(
-    title="ECHO Attendance by Series (2020)",
-    xaxis_title="Date",
-    yaxis_title="Participant Attendance",
-    legend_title="Series"
-    )
-
-fig3.show()
-
-#plot the 2020 session attendance data using Plotly, a multi-line graph, without the outliars
-fig1 = px.line(non_XWT_attendance_2020_df_SOL, x='Date', y='Attendance',
-             hover_data=['Clinic Name', 'Date', 'Session Topic','Attendance'],
-             color='Clinic Name',
-             labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
-             color_discrete_map={'BH in PC':'blue', 
-                                 'OPSUD':'gold', 
-                                 'COVID':'gray', 
-                                 'PALTC':'gainsboro', 
-                                 'PSUD':'yellow', 
-                                 'Syphilis':'silver'},
-             height=400)
-
-#isolate the XWT data in a separate DF
-fig2 = px.scatter(XWT_attendance_2020_df_SOL, x="Date", y="Attendance",
-                 color = 'Clinic Name',
-                 size = 'Attendance',
-                 hover_data={'Date':'|%B %d, %Y'},
-                 labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
-                 color_discrete_map={'XWT':'orange'},
-                 height=400)
-
-fig3 = go.Figure(data=fig1.data + fig2.data)
-
-fig3.update_xaxes(
-    dtick="M1",
-    tickformat="%b\n%Y")
-
-fig3.update_layout(
-    title="ECHO Attendance by Series (2020) (Sans outliars)",
-    xaxis_title="Date",
-    yaxis_title="Participant Attendance",
-    legend_title="Series"
-    )
-
-fig3.show()
-
-#plot the 2021 session attendance data using Plotly, a multi-line graph
-fig1 = px.line(non_XWT_attendance_2021_df, x='Date', y='Attendance',
-             hover_data=['Clinic Name', 'Date', 'Session Topic','Attendance'],
-             color='Clinic Name',
-             labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
-             color_discrete_map={'BH in PC':'blue', 
-                                 'OPSUD':'gold', 
-                                 'COVID':'gray', 
-                                 'PALTC':'gainsboro', 
-                                 'PSUD':'yellow', 
-                                 'CTSUDs':'olive', 
-                                 'VHLC':'mediumslateblue',
-                                 'PBH':'dodgerblue'},
-             height=400)
-
-#isolate the XWT data in a separate DF
-fig2 = px.scatter(XWT_attendance_2021_df, x="Date", y="Attendance",
-                 color = 'Clinic Name',
-                 size = 'Attendance',
-                 hover_data={'Date':'|%B %d, %Y'},
-                 labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
-                 color_discrete_map={'XWT':'orange'},
-                 height=400)
-
-fig3 = go.Figure(data=fig1.data + fig2.data)
-
-fig3.update_xaxes(
-    dtick="M1",
-    tickformat="%b\n%Y")
-
-fig3.update_layout(
-    title="ECHO Attendance by Series (2021)",
-    xaxis_title="Date",
-    yaxis_title="Participant Attendance",
-    legend_title="Series"
-    )
-
-fig3.show()
-
-#Plot Cumulative (2018-2021) BH in PC series attendance data, in Plotly
-fig = px.line(cum_bh_pc_attendance_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho BH in PC Session Attendance (2018-2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M2",
-    tickangle=45,
-    tickformat="%b\n\n%Y")
-
-fig.show()
-
-#Plot Cumulative (2018-2021) OPSUD series attendance data, in Plotly
-fig = px.line(cum_opsud_attendance_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho OPSUD Session Attendance (2018-2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M2",
-    tickangle=45,
-    tickformat="%b\n\n%Y")
-
-fig.update_traces(line_color='gold')
-
-fig.show()
-
-#Plot Cumulative (2018-2021) XWT attendance data, in Plotly
-fig = px.scatter(cum_XWT_attendance_df, x="Date", y="Attendance",
-                 color = 'Clinic Name',
-                 size = 'Attendance',
-                 hover_data={'Date':'|%B %d, %Y'},
-                 labels={'Clinic Name':'ECHO Series', 'Date':'Session Date'},
-                 title='ECHO Idaho XWT Attendance (2018-2021)',
-                 color_discrete_map={'XWT':'orange'},
-                 height=400)
-
-fig.update_xaxes(
-    dtick="M2",
-    tickangle=45,
-    tickformat="%b\n\n%Y")
-
-fig.show()
-
-#Plot Cumulative (2020-2021) COVID series attendance data, in Plotly
-fig = px.line(cum_COVID_attendance_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho COVID-19 Session Attendance (2020-2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M2",
-    tickangle=45,
-    tickformat="%b\n\n%Y")
-
-fig.update_traces(line_color='gray')
-
-fig.show()
-
-#Plot Cumulative (2020-2021) PALTC series attendance data, in Plotly
-fig = px.line(cum_PALTC_attendance_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho PALTC Session Attendance (2020-2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M2",
-    tickangle=45,
-    tickformat="%b\n\n%Y")
-
-fig.update_traces(line_color='gainsboro')
-
-fig.show()
-
-#Plot Cumulative (2020-2021) PSUD series attendance data, in Plotly
-fig = px.line(cum_PSUD_attendance_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho PSUD Session Attendance (2020-2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M2",
-    tickangle=45,
-    tickformat="%b\n\n%Y")
-
-fig.update_traces(line_color='yellow')
-
-fig.show()
-
-#Plot Cumulative (2020) Syphilis series attendance data, in Plotly
-fig = px.scatter(cum_syphilis_attendance_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho Syphilis Session Attendance (2020)',
-             size='Attendance',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=45,
-    tickformat="%b\n\n%Y")
-
-fig.update_traces(marker_color='silver')
-
-fig.show()
-
-#Plot Cumulative (2021) PBH series attendance data, in Plotly
-fig = px.line(cum_PBH_attendance_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho PBH Session Attendance (2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M2",
-    tickangle=0,
-    tickformat="%b\n\n%Y")
-
-fig.update_traces(line_color='dodgerblue')
-
-fig.show()
-
-#Plot Cumulative (2021) CTSUDs series attendance data, in Plotly
-fig = px.line(cum_CTSUDs_attendance_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho CTSUDs Session Attendance (2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M2",
-    tickangle=0,
-    tickformat="%b\n\n%Y")
-
-fig.update_traces(line_color='olive')
-
-fig.show()
-
-#Plot Cumulative (2021) VHLC series attendance data, in Plotly
-fig = px.line(cum_CTSUDs_attendance_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho VHLC Session Attendance (2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M2",
-    tickangle=0,
-    tickformat="%b\n\n%Y")
-
-fig.update_traces(line_color='mediumslateblue')
-
-fig.show()
-
-#Plot 2018 BH in PC series data, Session Attendance, in Plotly
-fig = px.line(BH_PC_attendance_2018_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho BH in PC Session Attendance (2018)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-
-fig.show()
-
-#Plot 2018 OPSUD series data, Session Attendance, in Plotly
-fig = px.line(OPSUD_attendance_2018_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho OPSUD Session Attendance (2018)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='gold')
-
-fig.show()
-
-#Plot 2019 BH in PC series data, Session Attendance, in Plotly
-fig = px.line(BH_PC_attendance_2019_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho BH in PC Session Attendance (2019)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-
-fig.show()
-
-#Plot 2019 OPSUD series data, Session Attendance, in Plotly
-fig = px.line(OPSUD_attendance_2019_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho OPSUD Session Attendance (2019)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='gold')
-
-fig.show()
-
-#Plot 2020 BH in PC series data, Session Attendance, in Plotly
-fig = px.line(BH_PC_attendance_2020_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho BH in PC Session Attendance (2020)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-
-fig.show()
-
-#Plot 2020 OPSUD series data, Session Attendance, in Plotly
-fig = px.line(OPSUD_attendance_2020_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho OPSUD Session Attendance (2020)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='gold')
-
-fig.show()
-
-#Plot 2020 COVID series data, Session Attendance, in Plotly
-fig = px.line(COVID_attendance_2020_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho COVID Session Attendance (2020)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='gray')
-
-fig.show()
-
-#Plot 2020 PALTC series data, Session Attendance, in Plotly
-fig = px.line(PALTC_attendance_2020_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho PALTC Session Attendance (2020)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='gainsboro')
-
-fig.show()
-
-#Plot 2020 PSUD series data, Session Attendance, in Plotly
-fig = px.line(PSUD_attendance_2020_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho PSUD Session Attendance (2020)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='yellow')
-
-fig.show()
-
-#Plot 2021 BH in PC series data, Session Attendance, in Plotly
-fig = px.line(BH_PC_attendance_2021_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho BH in PC Session Attendance (2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-
-fig.show()
-
-#Plot 2021 OPSUD series data, Session Attendance, in Plotly
-fig = px.line(OPSUD_attendance_2021_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho OPSUD Session Attendance (2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='gold')
-
-fig.show()
-
-#Plot 2021 COVID series data, Session Attendance, in Plotly
-fig = px.line(COVID_attendance_2021_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho COVID Session Attendance (2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='gray')
-
-fig.show()
-
-#Plot 2021 PALTC series data, Session Attendance, in Plotly
-fig = px.line(PALTC_attendance_2021_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho PALTC Session Attendance (2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='gainsboro')
-
-fig.show()
-
-#Plot 2021 PSUD series data, Session Attendance, in Plotly
-fig = px.line(PSUD_attendance_2021_df, x='Date', y='Attendance',
-             hover_data=['Session Topic','Date','Attendance'], 
-             color='Clinic Name',
-             labels={'Clinic Name':'Series', 'Date':'Session Date'},
-             title='ECHO Idaho PSUD Session Attendance (2021)',
-             height=400)
-
-fig.update_xaxes(
-    dtick="M1",
-    tickangle=0,
-    tickformat="%b\n%Y")
-fig.update_yaxes(
-    nticks=10)
-fig.update_traces(line_color='yellow')
-
-fig.show()
-
-
+        fig2 = go.Figure(data=fig_a.data + fig_b.data)
+
+        fig2.update_xaxes(
+            dtick="M1",
+            tickformat="%b\n%Y")
+
+        fig2.update_layout(
+            title="ECHO Attendance by Series (2018)",
+            xaxis_title="Date",
+            yaxis_title="Participant Attendance",
+            legend_title="Series"
+            )
+
+    return fig2
+
+@app.callback(
+    Output(mymap, component_property='figure'),
+    Input(dropdown, component_property='value')
+)
+
+def update_mymap(user_input):
+    if user_input == '2021':
+        fig3 = px.scatter_geo(series_by_location_2021_df,
+                            lat="latitude",
+                            lon="longitude",
+                            color="Series",
+                            color_discrete_map={
+                                "BH in PC":"blue",
+                                "OPSUD":"gold",
+                                "XWT":"orange",
+                                "COVID":"gray",
+                                "PALTC":"gainsboro",
+                                "PSUD":"yellow",
+                                "PBH":"dodgerblue",
+                                "VHLC":"mediumslateblue",
+                                "CTSUDs":"olive"
+                            },
+                            hover_name="Health Center City", 
+                            size="Attendees per Zip",
+                            center=dict(lon=-114.15, lat=44.65)
+                            )
+
+        fig3.update_layout(
+                title = 'ECHO Idaho Cumulative Attendance Data (2021)',
+                geo_scope='usa')
+
+    elif user_input == '2020':
+        fig3 = px.scatter_geo(series_by_location_2020_df,
+                            lat="latitude",
+                            lon="longitude",
+                            color="Series",
+                            color_discrete_map={
+                                "BH in PC":"blue",
+                                "OPSUD":"gold",
+                                "XWT":"orange",
+                                "COVID":"gray",
+                                "PALTC":"gainsboro",
+                                "Syphilis":"silver",
+                                "PSUD":"yellow"
+                            },
+                            hover_name="Health Center City", 
+                            size="Attendees per Zip",
+                            center=dict(lon=-114.15, lat=44.65)
+                            )
+
+        fig3.update_layout(
+                title = 'ECHO Idaho Cumulative Attendance Data (2020)',
+                geo_scope='usa')
+
+    elif user_input == '2019':
+        fig3 = px.scatter_geo(series_by_location_2019_df,
+                            lat="latitude",
+                            lon="longitude",
+                            color="Series",
+                            color_discrete_map={
+                                "BH in PC":"blue",
+                                "OPSUD":"gold",
+                                "XWT":"orange"
+                            },
+                            hover_name="Health Center City", 
+                            size="Attendees per Zip",
+                            center=dict(lon=-114.15, lat=44.65)
+                            )
+
+        fig3.update_layout(
+                title = 'ECHO Idaho Cumulative Attendance Data (2019)',
+                geo_scope='usa')
+
+    elif user_input == '2018':
+        fig3 = px.scatter_geo(series_by_location_2018_df,
+                            lat="latitude",
+                            lon="longitude",
+                            color="Series",
+                            color_discrete_map={
+                                "BH in PC":"blue",
+                                "OPSUD":"gold",
+                                "XWT":"orange"
+                            },
+                            hover_name="Health Center City", 
+                            size="Attendees per Zip",
+                            center=dict(lon=-114.15, lat=44.65)
+                            )
+
+        fig3.update_layout(
+                title = 'ECHO Idaho Cumulative Attendance Data (2018)',
+                geo_scope='usa')
+ 
+    return fig3
+
+
+# Run app
+if __name__=='__main__':
+    app.run_server(port=8053)
