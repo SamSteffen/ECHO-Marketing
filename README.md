@@ -1,6 +1,8 @@
 # ECHO Idaho Marketing Campaigns (2018-2021)
 The following is a visualization project analyzing various Mail Chimp email marketing campaigns for a continuing education platform serving Idaho's rural healthcare workforce, using Python's pandas and matplotlib libraries.
 
+To view the dashboard of interactive marketing and attendance data, [click here.](https://echo-idaho-dashboard.herokuapp.com/)
+
 ## Overview
 ### ECHO Idaho Program Structure
 [ECHO Idaho](https://www.uidaho.edu/academics/wwami/echo) is a free, virtual continuing education platform available for Idaho healthcare professionals. Housed at the University of Idaho, WWAMI Medical Education Program, the program is Idaho's only available chapter of the Extensions for Community Healthcare Outcomes organization, a global initiative intended to improve patient healthcare outcomes in rural and underserved communities through the democratization of expertise. The program is grant funded.
