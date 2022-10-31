@@ -1205,7 +1205,4 @@ def update_mymap(user_input):
 
 # Run app
 if __name__=='__main__':
-    try:
-        app.run_server(port=8053)
-    except HaltServer:
-        server.listen(process.env.PORT || port)
+    app.run_server(port=8053)
