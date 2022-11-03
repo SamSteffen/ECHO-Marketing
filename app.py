@@ -6,7 +6,6 @@ from datetime import datetime as dt
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-import seaborn as sns
 import plotly.express as px
 import plotly
 import plotly.offline as py
@@ -1201,7 +1200,6 @@ def update_mymap(user_input):
                 geo_scope='usa')
  
     return fig3
-
 
 # Run app
 if __name__=='__main__':
