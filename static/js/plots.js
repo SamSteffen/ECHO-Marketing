@@ -6,47 +6,101 @@ function makeTrace(i) {
             color: 'red'
         },
         visible: i === 0,
-        name: 'Data set ' + i,
+        name: i,
 
     };
 }
 
-Plotly.plot('graph', [0, 1, 2, 3].map(makeTrace), {
+Plotly.plot('graph', ['2018', '2019', '2020', '2021', 'All'].map(makeTrace), {
     updatemenus: [{
-        y: 0.8,
+        y: 0,
         yanchor: 'top',
         buttons: [{
             method: 'restyle',
-            args: ['line.color', 'red'],
-            label: 'red'
+            args: ['line.color', 'orange'],
+            label: 'XWT'
         }, {
             method: 'restyle',
             args: ['line.color', 'blue'],
-            label: 'blue'
+            label: 'BH in PC'
+        }, {
+            method: 'restyle',
+            args: ['line.color', 'gold'],
+            label: 'OPSUD'
+        }, {
+            method: 'restyle',
+            args: ['line.color', 'silver'],
+            label: 'Syphilis'
+        }, {
+            method: 'restyle',
+            args: ['line.color', 'gray'],
+            label: 'COVID-19'
+        }, {
+            method: 'restyle',
+            args: ['line.color', 'lightgray'],
+            label: 'PALTC'
+        }, {
+            method: 'restyle',
+            args: ['line.color', 'skyblue'],
+            label: 'PBH'
         }, {
             method: 'restyle',
             args: ['line.color', 'green'],
-            label: 'green'
+            label: 'CTSUDs'
+        }, {
+            method: 'restyle',
+            args: ['line.color', 'yellow'],
+            label: 'PSUD'
+        }, {
+            method: 'restyle',
+            args: ['line.color', 'purple'],
+            label: 'VHLC'
         }] 
     }, {
         y: 1,
         yanchor: 'top',
         buttons: [{
             method: 'restyle',
-            args: ['visible', [true, false, false, false]],
-            label: 'Data set 0'
+            args: ['visible', [true, false, false, false, false]],
+            label: '2018'
         }, {
             method: 'restyle',
-            args: ['visible', [false, true, false, false]],
-            label: 'Data set 1'
+            args: ['visible', [false, true, false, false, false]],
+            label: '2019'
         }, {
             method: 'restyle',
-            args: ['visible', [false, false, true, false]],
-            label: 'Data set 2'
+            args: ['visible', [false, false, true, false, false]],
+            label: '2020'
         }, {
             method: 'restyle',
-            args: ['visible', [false, false, false, true]],
-            label: 'Data set 3'
+            args: ['visible', [false, false, false, true, false]],
+            label: '2021'
+        }, {
+            method: 'restyle',
+            args: ['visible', [false, false, false, false, true]],
+            label: 'All'
         }]
     }],
 });
+
+
+
+
+
+// FOR REFERENCE
+// var years = ['2014', '2015', '2016']
+
+// Plotly.d3.csv('https://raw.githubusercontent.com/apodagrosi/datasets/master/PlotlyTest_Summary_SalesByDealerByYear.csv', (err, rows) => {
+//   var data = years.map(y => {
+//     var d = rows.filter(r => r.year === y)
+    
+//     return {
+//       type: 'bar',
+//       name: y,
+//       x: d.map(r => r.dealer),
+//       y: d.map(r => r.sales)
+//     }
+//   })
+  
+//   Plotly.newPlot('graph', data)
+// });
