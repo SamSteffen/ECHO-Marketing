@@ -1,7 +1,7 @@
 # ECHO Idaho Marketing Campaigns (2018-2021)
-The following is a visualization project analyzing various Mail Chimp email marketing campaigns for a continuing education platform serving Idaho's rural healthcare workforce, using Python's pandas and matplotlib libraries.
+The following is a visualization project analyzing various Mail Chimp email marketing campaigns for a continuing education platform serving Idaho's rural healthcare workforce, using Python's pandas and matplotlib libraries, as well as plotly's python and dash applications.
 
-To view the dashboard of interactive marketing and attendance data, [click here.](https://echo-idaho-dashboard.herokuapp.com/)
+An interactive dashboard of marketing and attendance data is in the works. The app is currently viewable on local servers.
 
 ## Overview
 ### ECHO Idaho Program Structure
@@ -24,7 +24,7 @@ These are emails that individuals who are registered for a particular series rec
 2. **Weekly Emails:**    
 Because ECHO is of a size now where it has multiple sessions from different series each week, a weekly email is sent out every Monday morning, featuring all of the ECHO sessions occuring in a given week. These emails also feature announcements about upcoming events and participant reminders.
 3. **Newsletters:**    
-In August of 2020, ECHO Idaho sent its first newsletter. These were initially sent quarterly, then bi-montlhly. As of August 2022, they have become monthly.
+In August of 2020, ECHO Idaho sent its first newsletter. These were initially sent quarterly, then bi-monthly. As of August 2022, they have become monthly.
 4. **Special Announcements:**    
 Special announcement emails are utilized for special occasions, guest speakers, series launches/re-launches, special registrations, redactions and other infrequent or singular events and communications. 
 
