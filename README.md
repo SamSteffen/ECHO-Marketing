@@ -248,3 +248,6 @@ Here is the same data color-coordinated to show which series brought in new part
 - Do people forward our emails?
 - How many people are estimated to "fall through the cracks" because we lack a stable/reliable CRM (customer relations manager)?
 - What is the impact of in-person proselytizing on session attendance and series registration (such as in-person conferences, site-visits, watch-parties, etc.)
+
+# Presentation
+A slideshow of this presentation is available [here.](https://docs.google.com/presentation/d/1HqHPVBiaXds5e4nAytt1Akn5_7-cgEegw21cDGeyglk/edit?usp=sharing)
