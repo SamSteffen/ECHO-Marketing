@@ -230,6 +230,10 @@ Here is the same data color-coordinated to show which series brought in new part
 
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/matplotlib/New_attendees_by_series_cumulative.png" alt="New attendees by series" width="400"/>
 
+Here is the same data as above with the outliar data for the March 2020 COVID-19 kickoff session, at which over 450 new participants were present, removed:
+
+<img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/New_attendees_by_series_sans_outliars.png" alt="New attendees by series sans outliars" width="400"/>
+
 The scatter plot below illustrates the net growth of ECHO's population by new attendees over time:
 
 <img src="https://github.com/SamSteffen/ECHO-Marketing/blob/main/Visualizations/Cumulative/matplotlib/Net_attendance_growth_cumulative.png" alt="Net attendance growth" width="400"/>
