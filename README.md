@@ -246,6 +246,7 @@ Here is the same data color-coordinated to show which series brought in new part
 
 ## Summary
 > In general, the data shows that despite steady and in some cases rapid increase of email recipients over time, attendance at ECHO sessions remains relatively constant. This suggests that the increase in email recipients may be necessary to maintain steady attendance rates.   
+
 > New attendees appear in greater numbers at series kickoffs. This could be explained by various "special" email campaigns that are baked into the new series launches, that involve sending unsolicited emails to a wide list of contacts and promoting the information in partner publications for months in advance of the start-date.
 
 #### Questions for Further Analysis
