@@ -35,12 +35,13 @@ An ECHO program-specific online database where personal info (name, email, crede
 2. **MailChimp**    
 The University of Idaho's main communications system, which stores and preserves metrics fo each campaign such as: how many people received each email, how many times it was opened, how many times it was forwarded, how many links were clicked, etc.;
 
-### Why Emails?
-The purpose of this analysis is to bring these data sources together to create visualizations for attendance and email data for each ECHO series and activity years (2018-2021). It is also to determine the following:
-- The efficacy of daily email campaigns on program attendance (the relationship between email open-rates and session attendance).
-- What can be learned from the ECHO sessions with the best attendance and the type of email campaign that was used to promote it? 
-- What can be learned from the ECHO sessions with the worst attendance and the type of email campaigns used to promote it?
-- Using cumulative email and attendance data, establish a metric that can be used to determine successful versus unsuccessful email campaigns for future marketing purposes.
+### Questions to Investigate:
+The purpose of this analysis is to bring these data sources together to create visualizations for attendance and email data for each ECHO series and activity years (2018-2021). It is also to determine the following:   
+- The efficacy of daily email campaigns on program attendance (the relationship between email open-rates and session attendance).   
+- What is the best way to maximize participation of our target audience?   
+- Is there a way to visualize the data to easily access pertinent information from past years, to inform future series planning, such as:   
+   * Session with topic that had best/worst attendance for each series.   
+   * Geographical regions of Idaho that attend each series.
 
 ## Results
 To illustrate the impact of email campaigns on ECHO Idaho's series by attendance, it's important to state the various education series ECHO Idaho has hosted by program year. The following represents a dataframe showing 10 series, broken down by series name, launch-date and end-date:
@@ -240,14 +241,15 @@ Here is the same data color-coordinated to show which series brought in new part
 ---
 
 ## Summary
-- In general, the data shows that despite steady and in some cases rapid increase of email recipients over time, attendance at ECHO sessions remains relatively constant.
-- New attendees appear in greater numbers at series kickoffs. This could be explained by various "special" email campaigns that are baked into the new series launches, that involve sending unsolicited emails to a wide list of contacts and promoting the information in partner publications for months in advance of the start-date.
+> In general, the data shows that despite steady and in some cases rapid increase of email recipients over time, attendance at ECHO sessions remains relatively constant. This suggests that the increase in email recipients may be necessary to maintain steady attendance rates.
+> New attendees appear in greater numbers at series kickoffs. This could be explained by various "special" email campaigns that are baked into the new series launches, that involve sending unsolicited emails to a wide list of contacts and promoting the information in partner publications for months in advance of the start-date.
 
 #### Questions for Further Analysis
 - If attendance remains constant despite increased email recipients, does this indicate that the attendees at ECHO sessions are circulating or are the sessions being attended consistently by the same audience? Further analysis is needed to determine this.
 - Do people forward our emails?
 - How many people are estimated to "fall through the cracks" because we lack a stable/reliable CRM (customer relations manager)?
-- What is the impact of in-person proselytizing on session attendance and series registration (such as in-person conferences, site-visits, watch-parties, etc.)
+- What is the impact of in-person proselytizing on session attendance and series registration (such as in-person conferences, site-visits, watch-parties, etc.)?
+- Using cumulative email and attendance data, establish a metric that can be used to determine successful versus unsuccessful email campaigns for future marketing purposes.
 
 # Presentation
 A slideshow of this presentation is available [here.](https://docs.google.com/presentation/d/1HqHPVBiaXds5e4nAytt1Akn5_7-cgEegw21cDGeyglk/edit?usp=sharing)
